@@ -1,19 +1,20 @@
 import React from 'react';
 import styled from "styled-components";
 
-import avatar from "../images/event.svg"
+
 
 function Home() {
     return (
         <Wrapper>
-            <div>
-                <span>
-                    Connect via online
-                </span>
+            <Intro>
+                <Heading>
+                    Connect via
+                    <br/>online
+                </Heading>
                 <br/>
                 <input type="text" required/>
-            </div>
-<div> <img src={avatar} alt="meeting" width={ 300}/></div>
+            </Intro>
+ <Image src="" alt="meeting" />
            
         </Wrapper>
     )
@@ -22,10 +23,31 @@ function Home() {
 export default Home
 
 const Wrapper = styled.div`
-width:100%;
-display:flex;
-flex-direction:flex-start;
-justify-content:space-between;
-align-items:center;
-padding: 70px ;
-`; 
+  display: flex;
+  width: 1080px;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+ 
+`;
+
+const Intro = styled.div`
+  text-align: center;
+  line-height: 24px;
+  padding-top: 200px;
+  padding-bottom: 175px;
+  display: flex-start;
+`;
+
+const Heading = styled.h1`
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 40px;
+`;
+
+const Image = styled.img`
+background:grey;
+width:50%;
+width:50%;
+border-radius:5px;`;
+
