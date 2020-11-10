@@ -5,6 +5,7 @@ function NavBar() {
     return (
         <NavBa>
             <Heading>Eventily</Heading>
+         
         </NavBa>
     )
 }
@@ -24,3 +25,5 @@ line-height: 60px;
 padding:5px 10px;
 font-weight:bold;
 `;
+
+

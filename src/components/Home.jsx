@@ -1,26 +1,28 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
-
-
+import image from "../images/team.svg";
 
 function Home() {
-    return (
-        <Wrapper>
-            <Intro>
-                <Heading>
-                    Connect via
-                    <br/>online
-                </Heading>
-                <br/>
-                <input type="text" required/>
-            </Intro>
- <Image src="" alt="meeting" />
-           
-        </Wrapper>
-    )
+  return (<div>
+    <Wrapper>
+      <Intro>
+        <Heading>
+          Connect <small>via</small>
+          <br /> online events.
+        </Heading>
+        <br />
+        <Button type="submit" value="Browse Events" required />
+      </Intro>
+      <Image src={image} alt="meeting" />
+      
+    </Wrapper>
+    
+    </div>
+   
+  );
 }
 
-export default Home
+export default Home;
 
 const Wrapper = styled.div`
   display: flex;
@@ -28,7 +30,8 @@ const Wrapper = styled.div`
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
- 
+  padding-bottom:40px;
+  padding-top:40px;
 `;
 
 const Intro = styled.div`
@@ -41,13 +44,20 @@ const Intro = styled.div`
 
 const Heading = styled.h1`
   font-size: 40px;
-  font-weight: 300;
+  font-weight: 600;
   line-height: 40px;
+  color: #6c61f6;
 `;
 
 const Image = styled.img`
-background:grey;
-width:50%;
-width:50%;
-border-radius:5px;`;
+  width: 50%;
+  border-radius: 5px;
+`;
 
+const Button = styled.input`
+  border: 2px solid #6c61f6;
+  padding: 10px 20px;
+  font-size: 18px;
+  background: #6c61f6;
+  color:#fff;
+`;
