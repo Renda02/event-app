@@ -17,16 +17,16 @@ function Section() {
             {" "}
             <Name>Lydia Hallie</Name>
             <Title>Full Stack Developer</Title>
-            <p>
+            <Paragraph>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
               error tempora consequuntur dicta distinctio praesentium corporis
               quo ipsa eius, autem officia laborum dignissimos, optio nesciunt
               sunt mollitia libero totam itaque!
-            </p>
-            <div>
+            </Paragraph>
+            <Button>
               {" "}
               <button>Read More</button>
-            </div>
+            </Button>
           </Content>
         </Card>
 
@@ -38,16 +38,16 @@ function Section() {
             {" "}
             <Name>Jin Chen</Name>
             <Title>React Developer</Title>
-            <p>
+            <Paragraph>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
               error tempora consequuntur dicta distinctio praesentium corporis
               quo ipsa eius, autem officia laborum dignissimos, optio nesciunt
               sunt mollitia libero totam itaque!
-            </p>
-            <div>
+            </Paragraph>
+            <Button>
               {" "}
               <button>Read More</button>
-            </div>
+            </Button>
           </Content>
         </Card>
         <Card>
@@ -58,16 +58,16 @@ function Section() {
             {" "}
             <Name>Lee Bryon</Name>
             <Title>Full Stack Developer</Title>
-            <p>
+            <Paragraph>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
               error tempora consequuntur dicta distinctio praesentium corporis
               quo ipsa eius, autem officia laborum dignissimos, optio nesciunt
               sunt mollitia libero totam itaque!
-            </p>
-            <div>
+            </Paragraph>
+            <Button>
               {" "}
               <button>Read More</button>
-            </div>
+            </Button>
           </Content>
         </Card>
       </Slider>
@@ -82,16 +82,15 @@ const Wrapper = styled.div`
   padding-top: 40px;
   padding-bottom: 40px;
   display: grid;
-  place-items:center;
-  text-align:center;
-  
+  place-items: center;
+  text-align: center;
+
   background: #f2f2f2;
 `;
 
 const Slider = styled.div`
   max-width: 1100px;
   display: flex;
-
 `;
 
 const Card = styled.div`
@@ -112,15 +111,28 @@ const Profile = styled.img`
 `;
 
 const Content = styled.div`
-padding:10px 20px;`;
+  padding: 10px 20px;
+`;
 
 const Name = styled.div`
-font-size:25px;
-font-weight:600;`;
+  font-size: 25px;
+  font-weight: 600;
+`;
 
 const Title = styled.div`
   font-size: 20px;
   font-weight: 600;
   color: #6c61f6;
-  line-height:20px;
+  line-height: 20px;
+`;
+
+const Paragraph = styled.p`
+  text-align: justify;
+  margin: 10px 0;
+`;
+
+const Button = styled.div`
+  display: flex;
+  text-align: left;
+  margin: 10px 0;
 `;
