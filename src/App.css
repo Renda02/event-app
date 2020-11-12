@@ -9,3 +9,9 @@ body{
    list-style: none;
    text-decoration: none;
 }
+
+@media (max-width: 900px) {
+  .app {
+    flex-direction: column;
+  }
+}

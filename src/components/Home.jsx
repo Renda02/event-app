@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import Body from "./Body";
 import image from "../images/team.svg";
+import Section from "./Sectioln";
 
 function Home() {
   return (<div>
@@ -16,7 +18,8 @@ function Home() {
       <Image src={image} alt="meeting" />
       
     </Wrapper>
-    
+    <Body />
+    <Section />
     </div>
    
   );
