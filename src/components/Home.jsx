@@ -3,9 +3,11 @@ import styled from "styled-components";
 import Body from "./Body";
 import image from "../images/team.svg";
 import Section from "./Sectioln";
+import Footer from "./Footer";
 
 function Home() {
-  return (<div>
+  return (
+    <React.Fragment>
     <Wrapper>
       <Intro>
         <Heading>
@@ -20,7 +22,8 @@ function Home() {
     </Wrapper>
     <Body />
     <Section />
-    </div>
+    <Footer/>
+    </React.Fragment>
    
   );
 }
