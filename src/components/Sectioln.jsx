@@ -4,10 +4,11 @@ import image from "../images/Lydia.jpeg";
 function Section() {
   return (
     <Wrapper>
-      <div>
+      <Heading>
         <span>Useful Information</span>
         <h2>Latest Post</h2>
-      </div>
+      </Heading>
+      <CardWrapper>
       <Slider>
         <Card>
           <Image>
@@ -25,7 +26,7 @@ function Section() {
             </Paragraph>
             <Button>
               {" "}
-              <button>Read More</button>
+              <Submit>Read More</Submit>
             </Button>
           </Content>
         </Card>
@@ -46,7 +47,7 @@ function Section() {
             </Paragraph>
             <Button>
               {" "}
-              <button>Read More</button>
+              <Submit>Read More</Submit>
             </Button>
           </Content>
         </Card>
@@ -66,11 +67,32 @@ function Section() {
             </Paragraph>
             <Button>
               {" "}
-              <button>Read More</button>
+              <Submit>Read More</Submit>
+            </Button>
+          </Content>
+        </Card>
+        <Card>
+          <Image>
+            <Profile src={image} alt="Hallie" />
+          </Image>
+          <Content>
+            {" "}
+            <Name>Lee Bryon</Name>
+            <Title>Full Stack Developer</Title>
+            <Paragraph>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+              error tempora consequuntur dicta distinctio praesentium corporis
+              quo ipsa eius, autem officia laborum dignissimos, optio nesciunt
+              sunt mollitia libero totam itaque!
+            </Paragraph>
+            <Button>
+              {" "}
+              <Submit>Read More</Submit>
             </Button>
           </Content>
         </Card>
       </Slider>
+      </CardWrapper>
     </Wrapper>
   );
 }
@@ -81,15 +103,21 @@ const Wrapper = styled.div`
   width: 100%;
   padding-top: 40px;
   padding-bottom: 40px;
+`;
+
+const CardWrapper = styled.div`
   display: grid;
+  height: 100%;
   place-items: center;
   text-align: center;
+`;
 
-  background: #f2f2f2;
+const Heading = styled.div`
+  padding: 10px 20px;
 `;
 
 const Slider = styled.div`
-  max-width: 1100px;
+  max-width: 1000px;
   display: flex;
 `;
 
@@ -103,6 +131,8 @@ const Image = styled.div`
   height: 200px;
   width: 100%;
 `;
+
+
 
 const Profile = styled.img`
   height: 100%;
@@ -135,4 +165,16 @@ const Button = styled.div`
   display: flex;
   text-align: left;
   margin: 10px 0;
+`;
+
+const Submit = styled.button`
+  background: #6c61f6;
+  border:none;
+  color:#fff;
+  outline:none;
+  font-size:17px;
+  cursor: pointer;
+  border-radius:5px;
+padding:5px;
+transition:0.3ms ease-ease-in-out;
 `;
