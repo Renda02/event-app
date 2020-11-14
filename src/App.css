@@ -10,8 +10,11 @@ body{
    text-decoration: none;
 }
 
+
+/*
 @media (max-width: 900px) {
   .app {
+    display: flex;
     flex-direction: column;
   }
-}
+}*/
