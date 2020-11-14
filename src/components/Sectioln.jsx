@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { ExternalLink } from "react-external-link";
 
@@ -7,8 +8,30 @@ import lee from "../images/Lee.jpeg";
 import eve from "../images/Eve.jpeg";
 
 
+const baseUrl = "https://www.eventbrite.com/oauth/authorize?"
+const responseType = "code"
+const clientId = "YOUR_API_KEY"
+const redirectUri = "http://localhost:3000"
 
+// "response_type=code&client_id=YOUR_API_KEY&redirect_uri=YOUR_REDIRECT_URI"
 function Section() {
+  const [data, setData] = useState({ hits: [] });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await fetch(
+        `${baseUrl}response_type=${responseType}&client_id=${clientId}&redirect_uri=${redirectUri}`
+      );
+      const data = await result.json();
+
+      setData(data);
+    };
+
+    fetchData();
+  }, []);
+
+  console.log(data);
+
   return (
     <Wrapper>
       <Heading>
@@ -168,7 +191,7 @@ const Title = styled.div`
 `;
 
 const Paragraph = styled.p`
- text-align:start;
+  text-align: start;
   margin: 10px 0;
   padding: 5px;
 `;
