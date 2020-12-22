@@ -14,7 +14,7 @@ function Home() {
           Connect <small>via</small>
           <br /> online events.
         </Heading>
-        <br />
+       
         <Button type="submit" value="Browse Events" required />
       </Intro>
       <Image src={image} alt="meeting" />
@@ -32,20 +32,22 @@ export default Home;
 
 const Wrapper = styled.div`
   display: flex;
+  width:100%;
   width: 1080px;
   justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom:40px;
-  padding-top:40px;
+  margin:2em auto;
+  
+ 
+  
 `;
 
 const Intro = styled.div`
-  text-align: center;
-  line-height: 24px;
-  padding-top: 200px;
-  padding-bottom: 175px;
-  display: flex-start;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  
+ 
 `;
 
 const Heading = styled.h1`
@@ -53,6 +55,7 @@ const Heading = styled.h1`
   font-weight: 600;
   line-height: 40px;
   color: #6c61f6;
+  margin-bottom:1em;
 `;
 
 const Image = styled.img`
@@ -62,8 +65,16 @@ const Image = styled.img`
 
 const Button = styled.input`
   border: 2px solid #6c61f6;
-  padding: 10px 20px;
-  font-size: 18px;
+  padding: 0.7em 0.9em;
+  font-size: 1.123rem;
   background: #6c61f6;
-  color:#fff;
+  color: #fff;
+  border-radius: 30px;
+  margin-left:-6em;
+
+  &:hover {
+    background: #fff;
+    color: #6c61f6;
+    outline-width: 10px;
+  }
 `;
