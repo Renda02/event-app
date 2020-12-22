@@ -42,7 +42,7 @@ const NavBa = styled.div`
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.12);
 `;
 
-const Wrapper = styled.a`
+const Wrapper = styled.div`
   padding: 20px 0;
   background: #f4f3f5;
   display: flex;

@@ -4,10 +4,12 @@ import Body from "./Body";
 import image from "../images/team.svg";
 import Section from "./Sectioln";
 import Footer from "./Footer";
+import Header from "./Header";
 
 function Home() {
   return (
     <React.Fragment>
+      <Header />
     <Wrapper>
       <Intro>
         <Heading>
