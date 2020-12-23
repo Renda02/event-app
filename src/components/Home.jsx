@@ -10,23 +10,21 @@ function Home() {
   return (
     <React.Fragment>
       <Header />
-    <Wrapper>
-      <Intro>
-        <Heading>
-          Connect <small>via</small>
-          <br /> online events.
-        </Heading>
-       
-        <Button type="submit" value="Browse Events" required />
-      </Intro>
-      <Image src={image} alt="meeting" />
-      
-    </Wrapper>
-    <Body />
-    <Section />
-    <Footer/>
+      <Wrapper>
+        <Intro>
+          <Heading>
+            Connect <small>via</small>
+            <br /> online events.
+          </Heading>
+
+          <Button type="submit" value="Browse Events" required />
+        </Intro>
+        <Image src={image} alt="meeting" />
+      </Wrapper>
+      <Body />
+      <Section />
+      <Footer />
     </React.Fragment>
-   
   );
 }
 
@@ -34,22 +32,17 @@ export default Home;
 
 const Wrapper = styled.div`
   display: flex;
-  width:100%;
+  width: 100%;
   width: 1080px;
   justify-content: space-between;
-  margin:2em auto;
-  
- 
-  
+  margin: 2em auto;
 `;
 
 const Intro = styled.div`
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
-  
- 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 const Heading = styled.h1`
@@ -57,26 +50,27 @@ const Heading = styled.h1`
   font-weight: 600;
   line-height: 40px;
   color: #6c61f6;
-  margin-bottom:1em;
+  margin-bottom: 1em;
 `;
 
 const Image = styled.img`
   width: 50%;
   border-radius: 5px;
+  padding: 1em 0;
 `;
 
 const Button = styled.input`
   border: 2px solid #6c61f6;
   padding: 0.7em 0.9em;
   font-size: 1.123rem;
-  background: #6c61f6;
-  color: #fff;
-  border-radius: 30px;
-  margin-left:-6em;
 
+  border-radius: 30px;
+  margin-left: -6em;
+  background: #fff;
+  color: #6c61f6;
   &:hover {
-    background: #fff;
-    color: #6c61f6;
+    background: #6c61f6;
+    color: #fff;
     outline-width: 10px;
   }
 `;

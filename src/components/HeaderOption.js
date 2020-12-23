@@ -6,8 +6,8 @@ import styled from "styled-components";
 function HeaderOption({Icon,title}) {
     return (
         <Header>
-            {Icon && <Icon className="header_icon" />}
-            <h3>{title}</h3>
+            {Icon && <Icon className="header_icon" size={25}  />}
+            <Heading>{title}</Heading>
             
             
         </Header>
@@ -28,6 +28,11 @@ const Header = styled.div`
     color: #6c61f6;
   }
 `;
+
+const Heading = styled.h3`
+font-weight:500;
+font-size:1.1rem;
+color:#000;`;
 
 
 
