@@ -1,22 +1,30 @@
+import { useState,useRef } from "react";
 import styled from "styled-components";
-import "./HeaderOption";
-
-import { AiOutlinePlus } from "react-icons/ai";
-import { AiOutlineHeart } from "react-icons/ai";
+import { AiOutlinePlus, AiOutlineHeart } from "react-icons/ai";
 import { HiOutlineTicket } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
+
 import HeaderOption from "./HeaderOption";
 
 function Header() {
+  const [search, setSearch] = useState("");
+const searchRef=useRef();
+
+  const handleChange = () => {
+    const searchTerm=searchRef.current.value;
+    setSearch(searchTerm);
+
+  };
+
   return (
     <HeaderBar>
-      {" "}
       <HeaderLeft>
         <Heading> Evently</Heading>
       </HeaderLeft>
       <HeaderSearch>
         <BiSearch />
-        <Input type="text" />
+        <Input type="text" onChange={handleChange} ref={searchRef} />
+       
       </HeaderSearch>
       <HeaderRight>
         <HeaderOption Icon={AiOutlinePlus} title="Add event" />
@@ -61,7 +69,7 @@ const HeaderSearch = styled.div`
   border-radius: 5px;
   height: 22px;
   color: gray;
-  background-color:#fff;
+  background-color: #fff;
 `;
 
 const Input = styled.input`

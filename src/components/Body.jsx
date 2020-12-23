@@ -1,60 +1,59 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 function Body() {
-    return (
-      <Wrapper>
-        {" "}
-        <Heading>Upcoming Events</Heading>
-        <EventWrapper>
-          <Box>
-            <li>23h00-22h00</li>
-            <li>Tech Fair</li>
-            <li>
-              <Button type="submit" value="Sign up" />
-            </li>
-          </Box>
-        </EventWrapper>
-        <EventWrapper>
-          <Box>
-            <li>23h00-22h00</li>
-            <li>Tech Fair</li>
-            <li>
-              <Button type="submit" value="Sign up" />
-            </li>
-          </Box>
-        </EventWrapper>
-        <EventWrapper>
-          <Box>
-            <li>23h00-22h00</li>
-            <li>Tech Fair</li>
-            <li>
-              <Button type="submit" value="Sign up" />
-            </li>
-          </Box>
-        </EventWrapper>
-        <EventWrapper>
-          <Box>
-            <li>23h00-22h00</li>
-            <li>Tech Fair</li>
-            <li>
-              <Button type="submit" value="Sign up" />
-            </li>
-          </Box>
-        </EventWrapper>
-        <EventWrapper>
-          <Box>
-            <li>23h00-22h00</li>
-            <li>Tech Fair</li>
-            <li>
-              <Button type="submit" value="Sign up" />
-            </li>
-          </Box>
-        </EventWrapper>
-      </Wrapper>
-    );
+  return (
+    <Wrapper>
+      <Heading>Upcoming Events</Heading>
+      <EventWrapper>
+        <Box>
+          <li>23h00-22h00</li>
+          <li>Tech Fair</li>
+          <li>
+            <Button type="submit" value="Sign up" />
+          </li>
+        </Box>
+      </EventWrapper>
+      <EventWrapper>
+        <Box>
+          <li>23h00-22h00</li>
+          <li>Tech Fair</li>
+          <li>
+            <Button type="submit" value="Sign up" />
+          </li>
+        </Box>
+      </EventWrapper>
+      <EventWrapper>
+        <Box>
+          <li>23h00-22h00</li>
+          <li>Tech Fair</li>
+          <li>
+            <Button type="submit" value="Sign up" />
+          </li>
+        </Box>
+      </EventWrapper>
+      <EventWrapper>
+        <Box>
+          <li>23h00-22h00</li>
+          <li>Tech Fair</li>
+          <li>
+            <Button type="submit" value="Sign up" />
+          </li>
+        </Box>
+      </EventWrapper>
+      <EventWrapper>
+        <Box>
+          <li>23h00-22h00</li>
+          <li>Tech Fair</li>
+          <li>
+            <Button type="submit" value="Sign up" />
+          </li>
+        </Box>
+      </EventWrapper>
+    </Wrapper>
+  );
 }
 
-export default Body
+export default Body;
 
 const Wrapper = styled.div`
   width: 100%;
@@ -65,19 +64,17 @@ const Wrapper = styled.div`
   background: #f2f2f2;
 `;
 
-
 const EventWrapper = styled.div`
-  padding: 10px ;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Box = styled.ul`
   width: 880px;
   display: flex;
-  display:flex-start;
+  display: flex-start;
   justify-content: space-evenly;
   align-items: center;
   list-style: none;
@@ -85,11 +82,11 @@ const Box = styled.ul`
   padding-bottom: 20px;
   margin: 20px;
   background: #fff;
-  
 `;
 
 const Heading = styled.h2`
-padding:10px 20px;`;
+  padding: 10px 20px;
+`;
 
 const Button = styled.input`
   border: 2px solid #6c61f6;
@@ -98,4 +95,3 @@ const Button = styled.input`
   background: #6c61f6;
   color: #fff;
 `;
-
