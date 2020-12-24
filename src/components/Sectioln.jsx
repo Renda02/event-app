@@ -10,10 +10,11 @@ import eve from "../images/Eve.jpeg";
 
 const baseUrl = "https://www.eventbrite.com/oauth/authorize?"
 const responseType = "code"
-const clientId = "YOUR_API_KEY"
+const clientId = "QMCANE5C2K5URJ2M7FCH"
 const redirectUri = "http://localhost:3000"
 
 // "response_type=code&client_id=YOUR_API_KEY&redirect_uri=YOUR_REDIRECT_URI"
+//https://www.eventbriteapi.com/v3/users/me/?token=QMCANE5C2K5URJ2M7FCH
 function Section() {
   const [data, setData] = useState({ hits: [] });
 
