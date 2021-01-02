@@ -74,7 +74,7 @@ const HeaderBar = styled.div`
   border-bottom: 0.2px solid #f4f3f5;
   top: 0;
   position: sticky;
-  z-index: 999;
+  
   background: #f2f2f2;
 `;
 

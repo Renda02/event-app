@@ -5,10 +5,12 @@
      "location":"Online",
      "price":"Free",
     "date":"6/03/2021", 
-    "time":"17h00-18h00"
+    "time":"17h00-18h00",
+    "image":"https://cdn.getyourguide.com/img/tour/5da3a3a9d7294.jpeg/68.jpg"
+    
   },
   {
-    "title": "Sofware Engineer Meetup",
+    "title": "Tech-fair Meetup",
     "id":"2",
      "location":"Seville,Spain",
      "price":"10 euros",
@@ -16,7 +18,7 @@
     "time":"10h00-14h00"
   },
   {
-    "title": "Bussiness Conference",
+    "title": "Business Conference",
     "id":"3",
      "location":"Online(Zoom)",
      "price":"Free",
@@ -33,10 +35,10 @@
   },
   {
     "title": "Bootcamps Virtual",
-    "id":"4",
+    "id":"5",
      "location":"Online(Zoom)",
      "price":"Free",
     "date":"6/02/2021", 
     "time":"13h00-17h00"
-  },
+  }
 ]

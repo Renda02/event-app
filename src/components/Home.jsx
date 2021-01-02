@@ -1,14 +1,49 @@
-import React from "react";
+import { useState, useRef } from "react";
 import styled from "styled-components";
 import Body from "./Body";
 import image from "../images/team.svg";
 import Section from "./Sectioln";
 import Footer from "./Footer";
 import Header from "./Header";
+import { BiSearch } from "react-icons/bi";
+import events from "../data/events.json";
 
 function Home() {
+  const [search, setSearch] = useState("");
+  const searchRef = useRef();
+  const [suggestionList, setSuggestionList] = useState([]);
+  const [eventList, setEventList] = useState(events);
+
+  const handleSearch = () => {
+    const filteredEvent = eventList.filter((e) => {
+      if (e.title.toLowerCase().includes(search.toLowerCase())) {
+        return true;
+      }
+      return false;
+    });
+    setEventList(filteredEvent);
+  };
+
+  const handleChange = () => {
+    const searchTerm = searchRef.current.value;
+    const matchingEvents = events.filter((e) => {
+      if (e.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+        return true;
+      }
+      return false;
+    });
+    if (searchTerm.length > 0) {
+      setSuggestionList(matchingEvents);
+    }else{
+      // clean up
+      setSuggestionList([]);
+    }
+
+    setSearch(searchTerm);
+  };
+
   return (
-    <React.Fragment>
+    <>
       <Header />
       <Wrapper>
         <Intro>
@@ -17,14 +52,37 @@ function Home() {
             <br /> online events.
           </Heading>
 
-          <Button type="submit" value="Browse Events" required />
+          <HeaderSearch>
+            <div>
+              <BiSearch />
+              <Input type="text" onChange={handleChange} ref={searchRef} />
+              {suggestionList.length > 0 && (
+                <AutoComplete>
+                  {suggestionList.map((suggestion) => (
+                    <AutoCompleteResult
+                      onClick={() => {
+                        console.log("text");
+
+                        searchRef.current.value = suggestion.title;
+                        setSearch(suggestion.title);
+                        setSuggestionList([]);
+                      }}
+                    >
+                      {suggestion.title}
+                    </AutoCompleteResult>
+                  ))}
+                </AutoComplete>
+              )}
+            </div>
+            <Button onClick={handleSearch}>Search</Button>
+          </HeaderSearch>
         </Intro>
         <Image src={image} alt="meeting" />
       </Wrapper>
-      <Body />
+      <Body eventList={eventList} />
       <Section />
       <Footer />
-    </React.Fragment>
+    </>
   );
 }
 
@@ -33,9 +91,9 @@ export default Home;
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
-  width: 1080px;
+  max-width: 1080px;
   justify-content: space-between;
-  margin: 2em auto;
+  margin: 0 auto;
 `;
 
 const Intro = styled.div`
@@ -54,23 +112,63 @@ const Heading = styled.h1`
 `;
 
 const Image = styled.img`
-  width: 50%;
+  width: 25%;
   border-radius: 5px;
   padding: 1em 0;
 `;
 
-const Button = styled.input`
-  border: 2px solid #6c61f6;
-  padding: 0.7em 0.9em;
-  font-size: 1.123rem;
+const HeaderSearch = styled.div`
+  display: flex;
+  padding: 18px;
+  align-items: space-between;
+  position: relative;
+`;
 
-  border-radius: 30px;
-  margin-left: -6em;
+const Input = styled.input`
+  outline: none;
+  background: none;
+  padding: 18px;
+  border: none;
+  font-size: 1rem;
+  color: #000;
+  border-radius: 5px;
+  height: 22px;
+  color: gray;
+  background-color: #f2f2f2;
+`;
+
+const AutoComplete = styled.div`
+  padding: 5px 0 5px 0px;
+  left: 0px;
+  width: 100%;
   background: #fff;
-  color: #6c61f6;
+  top: 40px;
+  position: absolute;
+`;
+
+const AutoCompleteResult = styled.p`
+  font-size: 1rem;
+  color: #000;
+  width: 100%;
+  height: 18px;
+  padding-left: 20px;
+
   &:hover {
-    background: #6c61f6;
-    color: #fff;
-    outline-width: 10px;
+    background-color: #f2f2f2;
+    cursor: pointer;
+  }
+`;
+
+const Button = styled.button`
+  border: 2px solid #6c61f6;
+  padding: 5px 5px;
+  font-size: 18px;
+  background: #6c61f6;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    color: #6c61f6;
+    background: #fff;
   }
 `;
