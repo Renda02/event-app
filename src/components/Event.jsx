@@ -5,6 +5,7 @@ function Event(props) {
   return (
     <EventWrapper>
       <Box>
+          <img src={props.image} alt="event"/>
         <li>{props.time}</li>
         <li>{props.title}</li>
         <li>{props.location}</li>

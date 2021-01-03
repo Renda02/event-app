@@ -9,6 +9,7 @@ function Body(props) {
         {props.eventList.map((event) => {
           return (
             <Event
+            image={event.image}
               time={event.time}
               title={event.title}
               location={event.location}

@@ -18,12 +18,32 @@
     "time":"10h00-14h00"
   },
   {
-    "title": "Business Conference",
+    "title": "City Trabi Tour",
+    "id":"2",
+     "location":"Berlin",
+     "price":"10 euros",
+    "date":"Daily", 
+    "time":"12h00-14h00",
+    "image":"https://cdn.getyourguide.com/img/tour/5474be78c112b.jpeg/68.jpg"
+  },
+  {
+    "title": "Hotair ballon",
+    "id":"2",
+     "location":"Barcelona,Spain",
+     "price":"109 euros",
+    "date":"1/02/2021", 
+    "time":"10h00-14h00",
+    "image":"src=https://cdn.getyourguide.com/img/tour/5efd963c53ec8.jpeg/68.jpg"
+  },
+  
+  {
+    "title": "Virtual Pizza Making",
     "id":"3",
      "location":"Online(Zoom)",
      "price":"Free",
     "date":"6/01/2021", 
-    "time":"16h00-18h00"
+    "time":"16h00-18h00",
+    "image":"https://cdn.getyourguide.com/img/tour/5e95aca28617c.jpeg/68.jpg"
   },
   {
     "title": "JavaScript Beginner Worshop",
