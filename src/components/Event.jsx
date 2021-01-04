@@ -5,11 +5,13 @@ function Event(props) {
   return (
     <EventWrapper>
       <Box>
-          <img src={props.image} alt="event"/>
-        <li>{props.time}</li>
-        <li>{props.title}</li>
+        <img src={props.image} alt="event" />
+        <li><b>{props.title}</b></li>{" "}
+        <li>
+          <span>Duration:</span>
+          {props.time}
+        </li>
         <li>{props.location}</li>
-
         <li>
           <Button type="submit" value="Sign up" />
         </li>
@@ -26,7 +28,7 @@ const EventWrapper = styled.div`
   justify-content: center;
   width: 30%;
   background: #fff;
-  margin:5px;
+  margin: 5px;
 `;
 
 const Box = styled.ul`
