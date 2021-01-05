@@ -6,7 +6,7 @@ function Event(props) {
     <EventWrapper>
       <Box>
         <img src={props.image} alt="event" />
-        <li><b>{props.title}</b></li>{" "}
+        <h3><b>{props.title}</b></h3>{" "}
         <li>
           <span>Duration:</span>
           {props.time}

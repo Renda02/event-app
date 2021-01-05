@@ -1,9 +1,9 @@
 [
   {
-    "title": "React.js Conference",
+    "title": "Luxury Canal Cruise",
     "id":"1",
-     "location":"Online",
-     "price":"Free",
+     "location":"Amsterdam",
+     "price":"0",
     "date":"6/03/2021", 
     "time":"17h00-18h00",
     "image":"https://cdn.getyourguide.com/img/tour/5da3a3a9d7294.jpeg/68.jpg"
@@ -13,7 +13,7 @@
     "title": "Tech-fair Meetup",
     "id":"2",
      "location":"Seville,Spain",
-     "price":"10 euros",
+     "price":"10 ",
     "date":"1/02/2021", 
     "time":"10h00-14h00"
   },
@@ -30,7 +30,7 @@
     "title": "Hotair ballon",
     "id":"2",
      "location":"Barcelona,Spain",
-     "price":"109 euros",
+     "price":"109 ",
     "date":"1/02/2021", 
     "time":"10h00-14h00",
     "image":"src=https://cdn.getyourguide.com/img/tour/5efd963c53ec8.jpeg/68.jpg"
@@ -40,7 +40,7 @@
     "title": "Virtual Pizza Making",
     "id":"3",
      "location":"Online(Zoom)",
-     "price":"Free",
+     "price":"0",
     "date":"6/01/2021", 
     "time":"16h00-18h00",
     "image":"https://cdn.getyourguide.com/img/tour/5e95aca28617c.jpeg/68.jpg"
@@ -49,7 +49,7 @@
     "title": "JavaScript Beginner Worshop",
     "id":"4",
      "location":"Online(Zoom)",
-     "price":"Free",
+     "price":"0",
     "date":"26/01/2021", 
     "time":"16h00-18h00"
   },
@@ -57,7 +57,7 @@
     "title": "Bootcamps Virtual",
     "id":"5",
      "location":"Online(Zoom)",
-     "price":"Free",
+     "price":"0",
     "date":"6/02/2021", 
     "time":"13h00-17h00"
   }

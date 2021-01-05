@@ -5,6 +5,7 @@ import image from "../images/team.svg";
 import Section from "./Sectioln";
 import Footer from "./Footer";
 import Header from "./Header";
+import Events from "./Events";
 import { BiSearch } from "react-icons/bi";
 import events from "../data/events.json";
 
@@ -80,6 +81,7 @@ function Home() {
         <Image src={image} alt="meeting" />
       </Wrapper>
       <Body eventList={eventList} />
+      <Events />
       <Section />
       <Footer />
     </>

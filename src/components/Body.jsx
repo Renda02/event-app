@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Event from "./Event";
+import Events from "./Events"
 
 function Body(props) {
   return (
@@ -13,6 +14,21 @@ function Body(props) {
               time={event.time}
               title={event.title}
               location={event.location}
+              date={event.date}
+            />
+          );
+        })}
+      </EventContainer>
+      <EventContainer>
+      {props.eventList.map((events) => {
+          return (
+            <Events
+            image={events.image}
+              time={events.time}
+              title={events.title}
+              location={events.location}
+              date={events.date}
+              price={events.price}
             />
           );
         })}
@@ -29,7 +45,7 @@ const Wrapper = styled.div`
   padding-bottom: 40px;
   display: flex;
   flex-direction: column;
-  background: #f2f2f2;
+ 
 `;
 
 const Heading = styled.h2`
