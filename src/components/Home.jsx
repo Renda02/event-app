@@ -1,14 +1,14 @@
 import { useState, useRef } from "react";
-import styled from "styled-components";
+import Service from "./Service";
 import Body from "./Body";
-import image from "../images/team.svg";
 import Section from "./Sectioln";
 import Footer from "./Footer";
 import Header from "./Header";
-import Events from "./Events";
+
+import image from "../images/event.jpeg";
 import { BiSearch } from "react-icons/bi";
 import events from "../data/events.json";
-
+import styled from "styled-components";
 function Home() {
   const [search, setSearch] = useState("");
   const searchRef = useRef();
@@ -35,7 +35,7 @@ function Home() {
     });
     if (searchTerm.length > 0) {
       setSuggestionList(matchingEvents);
-    }else{
+    } else {
       // clean up
       setSuggestionList([]);
     }
@@ -49,14 +49,13 @@ function Home() {
       <Wrapper>
         <Intro>
           <Heading>
-            Connect <small>via</small>
-            <br /> online events.
+            Connect via
           </Heading>
-
+          <Headin>online events.</Headin>
           <HeaderSearch>
             <div>
               <BiSearch />
-              <Input type="text" onChange={handleChange} ref={searchRef} />
+              <Input type="text" onChange={handleChange} ref={searchRef} value="search events"/>
               {suggestionList.length > 0 && (
                 <AutoComplete>
                   {suggestionList.map((suggestion) => (
@@ -81,7 +80,8 @@ function Home() {
         <Image src={image} alt="meeting" />
       </Wrapper>
       <Body eventList={eventList} />
-      <Events />
+
+      <Service />
       <Section />
       <Footer />
     </>
@@ -105,16 +105,22 @@ const Intro = styled.div`
   flex-direction: column;
 `;
 
-const Heading = styled.h1`
-  font-size: 40px;
+const Heading = styled.div`
+  font-size: 1.8rem;
   font-weight: 600;
-  line-height: 40px;
+
   color: #6c61f6;
+`;
+
+const Headin = styled.div`
+  font-size: 1.8rem;
+  font-weight: 600;
+ 
   margin-bottom: 1em;
 `;
 
 const Image = styled.img`
-  width: 25%;
+  width: 45%;
   border-radius: 5px;
   padding: 1em 0;
 `;
@@ -133,7 +139,7 @@ const Input = styled.input`
   border: none;
   font-size: 1rem;
   color: #000;
-  border-radius: 5px;
+  border-radius: 8px 0 0 8px;
   height: 22px;
   color: gray;
   background-color: #f2f2f2;
@@ -168,7 +174,8 @@ const Button = styled.button`
   background: #6c61f6;
   color: #fff;
   cursor: pointer;
-
+  margin:0 0 1rem 0;
+border-radius:0 8px 8px 0 ;
   &:hover {
     color: #6c61f6;
     background: #fff;

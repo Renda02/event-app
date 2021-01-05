@@ -42,6 +42,8 @@ const HeaderLeft = styled.div`
 
 const Heading = styled.h1`
   font-size: 2rem;
+  cursor: pointer;
+  margin-left: 1.3rem;
 
   margin: 0 auto;
   font-weight: 600;

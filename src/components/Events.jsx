@@ -1,14 +1,14 @@
 import React from "react";
 
 import styled from "styled-components";
-import { FaRegStar, FaRegStarHalf } from "react-icons/fa";
+import { BsStarFill,BsStarHalf } from "react-icons/bs";
 import { BiTimeFive, BiLocationPlus } from "react-icons/bi";
 import { MdDateRange } from "react-icons/md";
 
 function Events(props) {
   return (
     <EventContainer>
-      <div className="item-list">
+      <ItemList>
         <Item>
           <div className="img">
             <img src={props.image} alt="images" />
@@ -32,19 +32,19 @@ function Events(props) {
                 </Details>
 
                 <Ratings><div> <RatingItem>
-                    <FaRegStar />
+                    <BsStarFill fill="#FCD94B"/>
                   </RatingItem>
                   <RatingItem>
-                    <FaRegStar />
+                    <BsStarFill fill="#FCD94B"/>
                   </RatingItem>
                   <RatingItem>
-                    <FaRegStar />
+                    <BsStarFill fill="#FCD94B"/>
                   </RatingItem>
                   <RatingItem>
-                    <FaRegStar />
+                    <BsStarFill fill="#FCD94B"/>
                   </RatingItem>
                   <RatingItem>
-                    <FaRegStarHalf />
+                    <BsStarHalf />
                   </RatingItem></div>
                   <div>
                     <p>from
@@ -61,7 +61,7 @@ function Events(props) {
             </ContentHeading>
           </Content>
         </Item>
-      </div>
+      </ItemList>
     </EventContainer>
   );
 }
@@ -119,3 +119,24 @@ const RatingItem = styled.span`
   font-size: 1.75rem;
   margin-right: 0.25rem;
 `;
+
+const ItemList=styled.div`
+display:grid;
+
+
+
+
+@media screen and (min-width: 768px){
+  .item-list{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: flex-start;
+      column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1080px){
+  .item-list{
+      grid-template-columns: repeat(3, 1fr);
+  }
+}`;
