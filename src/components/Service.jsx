@@ -27,11 +27,10 @@ export default Service;
 const Container = styled.div`
   display: block;
   min-width: 320px;
-  padding:  1.2rem;
+  padding:  1.6rem 1rem;
 
-    max-width: 1400px;
-    padding-left: 32px;
-    padding-right: 32px;
+    margin:0 auto;
+   
     width: 100%;
   
   @media (min-width: 768px) {

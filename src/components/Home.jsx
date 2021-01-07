@@ -1,14 +1,15 @@
 import { useState, useRef } from "react";
 import Service from "./Service";
 import Body from "./Body";
+import Button from "./Button";
+import events from "../data/events.json";
 
 import Footer from "./Footer";
 import Header from "./Header";
-
 import image from "../images/event.jpeg";
 import { BiSearch } from "react-icons/bi";
-import events from "../data/events.json";
 import styled from "styled-components";
+
 function Home() {
   const [search, setSearch] = useState("");
   const searchRef = useRef();
@@ -74,15 +75,15 @@ function Home() {
                 </AutoComplete>
               )}
             </div>
-            <Button onClick={handleSearch}>Search</Button>
+            <Btn onClick={handleSearch}>Search</Btn>
           </HeaderSearch>
         </Intro>
         <Image src={image} alt="meeting" />
       </Wrapper>
       <Body eventList={eventList} />
-
-      <Service />
+<Service />
       
+      <Button />
       <Footer />
     </>
   );
@@ -167,7 +168,7 @@ const AutoCompleteResult = styled.p`
   }
 `;
 
-const Button = styled.button`
+const Btn = styled.button`
   border: 2px solid #6c61f6;
   padding: 5px 5px;
   font-size: 18px;
