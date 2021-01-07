@@ -15,11 +15,13 @@
      "location":"Seville,Spain",
      "price":"10 ",
     "date":"1/02/2021", 
-    "time":"10h00-14h00"
+    "time":"10h00-14h00",
+    "image":"https://cdn.getyourguide.com/img/tour/5474be78c112b.jpeg/68.jpg"
   },
+
   {
     "title": "City Trabi Tour",
-    "id":"2",
+    "id":"3",
      "location":"Berlin",
      "price":"10 euros",
     "date":"Daily", 
@@ -28,17 +30,17 @@
   },
   {
     "title": "Hotair ballon",
-    "id":"2",
+    "id":"4",
      "location":"Barcelona,Spain",
      "price":"109 ",
     "date":"1/02/2021", 
     "time":"10h00-14h00",
-    "image":"src=https://cdn.getyourguide.com/img/tour/5efd963c53ec8.jpeg/68.jpg"
+    "image":"https://cdn.getyourguide.com/img/tour/5ccb1fa3d1b0a.jpeg/68.jpg"
   },
   
   {
     "title": "Virtual Pizza Making",
-    "id":"3",
+    "id":"5",
      "location":"Online(Zoom)",
      "price":"0",
     "date":"6/01/2021", 
@@ -47,18 +49,42 @@
   },
   {
     "title": "JavaScript Beginner Worshop",
-    "id":"4",
+    "id":"6",
      "location":"Online(Zoom)",
      "price":"0",
     "date":"26/01/2021", 
-    "time":"16h00-18h00"
+    "time":"16h00-18h00",
+    "image":"https://cdn.getyourguide.com/img/tour/5474be78c112b.jpeg/68.jpg"
+  },
+
+  {
+    "title": "Borghese Gallery",
+    "id":"7",
+     "location":"Online(Zoom)",
+     "price":"0",
+    "date":"26/01/2021", 
+    "time":"16h00-18h00",
+    "image":"https://cdn.getyourguide.com/img/tour/5f4fcce8dcd78.jpeg/68.jpg"
+  
   },
   {
-    "title": "Bootcamps Virtual",
-    "id":"5",
+    "title": "PhiPhi island",
+    "id":"8",
+     "location":"Thailand",
+     "price":" 10",
+    "date":"26/01/2021", 
+    "time":"16h00-18h00",
+    "image":"https://cdn.getyourguide.com/img/tour/5c0f7ed44912c.jpeg/68.jpg"
+  
+  },
+  {
+    "title": "Vatican Museum and Sisinte Chapel",
+    "id":"9",
      "location":"Online(Zoom)",
      "price":"0",
     "date":"6/02/2021", 
-    "time":"13h00-17h00"
+    "time":"13h00-17h00",
+    "image":"https://cdn.getyourguide.com/img/tour/5fd1f20bcd69e.jpeg/68.jpg"
+  
   }
 ]

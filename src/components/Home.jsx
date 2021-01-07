@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import Service from "./Service";
 import Body from "./Body";
-import Section from "./Sectioln";
+
 import Footer from "./Footer";
 import Header from "./Header";
 
@@ -82,7 +82,7 @@ function Home() {
       <Body eventList={eventList} />
 
       <Service />
-      <Section />
+      
       <Footer />
     </>
   );

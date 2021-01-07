@@ -8,6 +8,8 @@ body, input {
   font-family: "Montserrat", sans-serif;
   list-style: none;
   text-decoration: none;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 /*

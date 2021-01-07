@@ -1,79 +1,80 @@
 import React from "react";
-
 import styled from "styled-components";
-import { BsStarFill,BsStarHalf } from "react-icons/bs";
+import { BsStarFill, BsStarHalf, BsArrowDown } from "react-icons/bs";
 import { BiTimeFive, BiLocationPlus } from "react-icons/bi";
 import { MdDateRange } from "react-icons/md";
 
-function Events(props) {
+export default function Events(props) {
   return (
     <EventContainer>
-      <ItemList>
-        <Item>
-          <div className="img">
-            <img src={props.image} alt="images" />
-          </div>
-          <Content>
-            <ContentHeading>
+      <Item>
+        <div className="img-container">
+          <Image src={props.image} alt="food pic" />
+        </div>
+        <ContentWrapper>
+          <ContentHead>
+            <div>
+              <Title>{props.title}</Title>
               <div>
-                <Heading>{props.title}</Heading>
-                <Details>
-                  <span>
-                    <BiTimeFive />:{props.time}
-                  </span>
-
-                  <span>
-                    <MdDateRange />:{props.date}
-                  </span>
-
-                  <span>
-                    <BiLocationPlus />:{props.location}
-                  </span>
-                </Details>
-
-                <Ratings><div> <RatingItem>
-                    <BsStarFill fill="#FCD94B"/>
-                  </RatingItem>
-                  <RatingItem>
-                    <BsStarFill fill="#FCD94B"/>
-                  </RatingItem>
-                  <RatingItem>
-                    <BsStarFill fill="#FCD94B"/>
-                  </RatingItem>
-                  <RatingItem>
-                    <BsStarFill fill="#FCD94B"/>
-                  </RatingItem>
-                  <RatingItem>
-                    <BsStarHalf />
-                  </RatingItem></div>
-                  <div>
-                    <p>from
-                      <br/>
-                      {props.price}
-                      <br/>
-                      per person
-                    </p>
-                  </div>
-                 
-
-                </Ratings>
+                <Detail>
+                  <li>
+                    <span>
+                      <MdDateRange />:
+                    </span>
+                    {props.date}
+                  </li>
+                  <li>
+                    <span>
+                      <BiTimeFive />:{props.time}
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <BiLocationPlus />:{props.location}
+                    </span>
+                  </li>
+                </Detail>
               </div>
-            </ContentHeading>
-          </Content>
-        </Item>
-      </ItemList>
+              <Rating>
+                <RatingList>
+                  <BsStarFill />
+                </RatingList>
+                <RatingList>
+                  <BsStarFill />
+                </RatingList>
+                <RatingList>
+                  <BsStarFill />
+                </RatingList>
+                <RatingList>
+                  <BsStarFill />
+                </RatingList>
+                <RatingList>
+                  <BsStarHalf />
+                </RatingList>
+              </Rating>
+              <Review>4.5 (122)</Review>
+            </div>
+            <Button>
+              <BsArrowDown size={40} />
+            </Button>
+          </ContentHead>
+        </ContentWrapper>
+      </Item>
     </EventContainer>
   );
 }
 
-export default Events;
-
 const EventContainer = styled.div`
-  max-width: 1380px;
+  max-width: 880px;
   margin-left: auto;
   margin-right: auto;
+  display: grid;
+  grid-template-rows: repeat (3, auto);
+`;
+
+const Image = styled.img`
+  object-fit: cover;
   width: 100%;
-  padding: 3rem;
 `;
 
 const Item = styled.div`
@@ -81,62 +82,62 @@ const Item = styled.div`
   border-radius: 5px;
   overflow: hidden;
   margin-bottom: 2rem;
-  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.35);
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.35);
 `;
 
-const Content = styled.div`
-  padding: 1rem 1.6rem;
-  line-height: 1.2rem;
+const ContentWrapper = styled.div`
+  padding: 1rem 1.2rem;
 `;
 
-const ContentHeading = styled.div`
+const ContentHead = styled.div`
   display: grid;
-  grid-template-columns: auto 30px;
+ 
   padding-bottom: 1.2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 `;
 
-const Heading = styled.div`
-  font-size: 1rem;
+const Title = styled.h2`
+  font-size: 1.6rem;
+
   padding: 0.4rem 0;
 `;
 
-const Details = styled.div`
-  display: flex;
-  flex-direction: column;
+const Detail = styled.ul`
+  list-style: none;
 `;
 
-const Ratings = styled.footer`
-  align-items: flex-end;
-    display: flex;
-    justify-content: space-between;
-    margin-top: auto;
+const Rating = styled.ul`
+  display: inline-flex;
+  color: yellow;
+  margin-top: 1.9rem;
 `;
 
-const RatingItem = styled.span`
-  font-size: 1.75rem;
+const RatingList = styled.li`
+  font-size: 0.75rem;
   margin-right: 0.25rem;
 `;
 
-const ItemList=styled.div`
-display:grid;
+const Review = styled.small`
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding-left: 0.5rem;
+  opacity: 0.7;
+`;
 
+const Button = styled.button`
+  padding: 1rem;
+  background: purple;
+  opacity: 0.9;
 
-
-
-@media screen and (min-width: 768px){
-  .item-list{
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      align-items: flex-start;
-      column-gap: 2rem;
-  }
-}
-
-@media screen and (min-width: 1080px){
-  .item-list{
-      grid-template-columns: repeat(3, 1fr);
-  }
-}`;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+margin-right:15px;
+  width: 45px;
+  height: 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: 0;
+  border: none;
+`;
