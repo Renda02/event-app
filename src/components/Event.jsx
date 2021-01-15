@@ -48,8 +48,9 @@ function Event(props) {
                 <Review>4.5 (122)</Review>
               </RatingContainer>
             </Ratings>{" "}
-            <Button type="submit" value="Sign up" />
-            <Link to={`/events/${props.id}`}>See Event</Link>
+            <ButtonBox> <Button type="submit" value="Sign up" />
+            <EventButton to={`/events/${props.id}`}>See Event</EventButton></ButtonBox>
+           
           </div>
         </ContentHeading>
       </Box>
@@ -81,6 +82,10 @@ const Box = styled.div`
   margin: 0px;
 `;
 
+const ButtonBox=styled.div`
+display:flex;
+justify-content:space-between;`;
+
 const Button = styled.input`
   background: #6c61f6;
   border: none;
@@ -93,6 +98,24 @@ const Button = styled.input`
   transition: 0.3ms ease-ease-in-out;
   margin-top:.9rem;
 `;
+
+const EventButton=styled(Link)`
+
+  border: none;
+  
+  outline: none;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration:none;
+  padding: 5px;
+  transition: 0.3ms ease-ease-in-out;
+  margin-top:.9rem;  color:#6c61f6;
+    background:#fff;
+  
+  &:hover{color: #fff;
+  background: #6c61f6;
+  }`;
 
 const ContentHeading = styled.div`
   display: grid;
