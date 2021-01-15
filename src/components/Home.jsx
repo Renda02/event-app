@@ -1,14 +1,15 @@
 import { useState, useRef } from "react";
+import {  Route, Switch } from "react-router-dom";
+
 import Service from "./Service";
 import Body from "./Body";
-
-import Footer from "./Footer";
-import Header from "./Header";
+import Button from "./Button";
+import events from "../data/events.json";
 
 import image from "../images/event.jpeg";
 import { BiSearch } from "react-icons/bi";
-import events from "../data/events.json";
 import styled from "styled-components";
+
 function Home() {
   const [search, setSearch] = useState("");
   const searchRef = useRef();
@@ -45,17 +46,21 @@ function Home() {
 
   return (
     <>
-      <Header />
+     
+
       <Wrapper>
         <Intro>
-          <Heading>
-            Connect via
-          </Heading>
+          <Heading>Connect via</Heading>
           <Headin>online events.</Headin>
           <HeaderSearch>
             <div>
               <BiSearch />
-              <Input type="text" onChange={handleChange} ref={searchRef} value="search events"/>
+              <Input
+                type="text"
+                onChange={handleChange}
+                ref={searchRef}
+                value="search events"
+              />
               {suggestionList.length > 0 && (
                 <AutoComplete>
                   {suggestionList.map((suggestion) => (
@@ -74,16 +79,16 @@ function Home() {
                 </AutoComplete>
               )}
             </div>
-            <Button onClick={handleSearch}>Search</Button>
+            <Btn onClick={handleSearch}>Search</Btn>
           </HeaderSearch>
         </Intro>
         <Image src={image} alt="meeting" />
       </Wrapper>
       <Body eventList={eventList} />
-
       <Service />
-      
-      <Footer />
+
+      <Button />
+     
     </>
   );
 }
@@ -115,7 +120,7 @@ const Heading = styled.div`
 const Headin = styled.div`
   font-size: 1.8rem;
   font-weight: 600;
- 
+
   margin-bottom: 1em;
 `;
 
@@ -167,15 +172,15 @@ const AutoCompleteResult = styled.p`
   }
 `;
 
-const Button = styled.button`
+const Btn = styled.button`
   border: 2px solid #6c61f6;
   padding: 5px 5px;
   font-size: 18px;
   background: #6c61f6;
   color: #fff;
   cursor: pointer;
-  margin:0 0 1rem 0;
-border-radius:0 8px 8px 0 ;
+  margin: 0 0 1rem 0;
+  border-radius: 0 8px 8px 0;
   &:hover {
     color: #6c61f6;
     background: #fff;

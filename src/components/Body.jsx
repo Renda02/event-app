@@ -15,6 +15,7 @@ function Body(props) {
               title={event.title}
               location={event.location}
               date={event.date}
+              id={event.id}
             />
           );
         })}

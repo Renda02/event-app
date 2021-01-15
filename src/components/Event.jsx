@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import styled from "styled-components";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import { BiTimeFive, BiLocationPlus } from "react-icons/bi";
@@ -48,6 +49,7 @@ function Event(props) {
               </RatingContainer>
             </Ratings>{" "}
             <Button type="submit" value="Sign up" />
+            <Link to={`/events/${props.id}`}>See Event</Link>
           </div>
         </ContentHeading>
       </Box>
