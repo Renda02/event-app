@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import styled from "styled-components";
 import { AiOutlinePlus, AiOutlineHeart } from "react-icons/ai";
 import { HiOutlineTicket } from "react-icons/hi";
@@ -8,7 +10,7 @@ function Header() {
   return (
     <HeaderBar>
       <HeaderLeft>
-        <Heading> Evently</Heading>
+        <Heading  to="/"> Evently</Heading>
       </HeaderLeft>
 
       <HeaderRight>
@@ -40,11 +42,11 @@ const HeaderLeft = styled.div`
   display: flex;
 `;
 
-const Heading = styled.h1`
+const Heading = styled(Link)`
   font-size: 2rem;
   cursor: pointer;
   margin-left: 1.3rem;
-
+text-decoration:none;
   margin: 0 auto;
   font-weight: 600;
   color: #6c61f6;
