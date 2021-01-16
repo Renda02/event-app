@@ -20,7 +20,7 @@ function Event(props) {
               </span>
 
               <span>
-                <MdDateRange />:{props.date}
+                <MdDateRange />:{props.date.toString()}
               </span>
 
               <span>

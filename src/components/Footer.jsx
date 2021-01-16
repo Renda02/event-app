@@ -5,8 +5,8 @@ function Footer() {
   return (
     <Wrapper>
       <Paragraph>Welcome to Eventily</Paragraph>
-      <Contact to="/aboutus">Contact Us</Contact>
-      <About to="/contact">About Us</About>
+      <About to="/about-us">About Us</About>
+      <Contact to="/contact">Contact Us</Contact>
       <SubFooter>
         <Paragraph> Copyright @Evently 2020 </Paragraph>
       </SubFooter>

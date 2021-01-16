@@ -4,6 +4,9 @@ import EventPage from "./components/EventPage";
 import Home from "./components/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import AddEvent from "./components/AddEvent";
 import "./App.css";
 
 function App() {
@@ -13,7 +16,16 @@ function App() {
       <Switch>
         {" "}
         <Route path={`/events/:eventId`}>
-         <EventPage/> 
+          <EventPage />
+        </Route>
+        <Route path="/about-us">
+          <About />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>{" "}
+        <Route path="/add-event">
+          <AddEvent />
         </Route>
         <Route path="/">
           <Home />
