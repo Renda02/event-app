@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import { BiTimeFive, BiLocationPlus } from "react-icons/bi";
@@ -15,16 +15,15 @@ function Event(props) {
           <div>
             <Heading>{props.title}</Heading>
             <Details>
+              <Venue>
+                <BiLocationPlus /> {props.location}
+              </Venue>
               <span>
                 <BiTimeFive />:{props.time}
               </span>
 
               <span>
                 <MdDateRange />:{props.date.toString()}
-              </span>
-
-              <span>
-                <BiLocationPlus />:{props.location}
               </span>
             </Details>
             <Ratings>
@@ -48,9 +47,11 @@ function Event(props) {
                 <Review>4.5 (122)</Review>
               </RatingContainer>
             </Ratings>{" "}
-            <ButtonBox> <Button type="submit" value="Sign up" />
-            <EventButton to={`/events/${props.id}`}>See Event</EventButton></ButtonBox>
-           
+            <ButtonBox>
+              {" "}
+              <Button type="submit" value="Sign up" />
+              <EventButton to={`/events/${props.id}`}>See Event</EventButton>
+            </ButtonBox>
           </div>
         </ContentHeading>
       </Box>
@@ -82,9 +83,10 @@ const Box = styled.div`
   margin: 0px;
 `;
 
-const ButtonBox=styled.div`
-display:flex;
-justify-content:space-between;`;
+const ButtonBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
 
 const Button = styled.input`
   background: #6c61f6;
@@ -96,26 +98,28 @@ const Button = styled.input`
   border-radius: 5px;
   padding: 5px;
   transition: 0.3ms ease-ease-in-out;
-  margin-top:.9rem;
+  margin-top: 0.9rem;
 `;
 
-const EventButton=styled(Link)`
-
+const EventButton = styled(Link)`
   border: none;
-  
+
   outline: none;
   font-size: 17px;
   cursor: pointer;
   border-radius: 5px;
-  text-decoration:none;
+  text-decoration: none;
   padding: 5px;
   transition: 0.3ms ease-ease-in-out;
-  margin-top:.9rem;  color:#6c61f6;
-    background:#fff;
-  
-  &:hover{color: #fff;
-  background: #6c61f6;
-  }`;
+  margin-top: 0.9rem;
+  color: #6c61f6;
+  background: #fff;
+
+  &:hover {
+    color: #fff;
+    background: #6c61f6;
+  }
+`;
 
 const ContentHeading = styled.div`
   display: grid;
@@ -134,15 +138,20 @@ const Details = styled.div`
   flex-direction: column;
 `;
 
+const Venue=styled.span`
+font-weight:700;
+font-size:1.1rem;
+color:#6c61f6;`;
+
 const Ratings = styled.footer`
   align-items: flex-end;
   display: flex;
   justify-content: space-between;
-  
 `;
 
-const RatingContainer=styled.div`
-margin-top:1.1rem;`;
+const RatingContainer = styled.div`
+  margin-top: 1.1rem;
+`;
 
 const RatingItem = styled.span`
   margin: 0.25rem;
