@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import Service from "./Service";
 import Body from "./Body";
 import Button from "./Button";
+
 import events from "../data/events.json";
 
 import image from "../images/event.jpeg";
@@ -88,6 +89,7 @@ function Home() {
       <Service />
 
       <Button />
+     
      
     </>
   );
