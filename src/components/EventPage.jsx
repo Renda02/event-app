@@ -1,10 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
-import { AiOutlineInfoCircle } from "react-icons/ai";
+import { AiFillHeart, AiOutlineInfoCircle } from "react-icons/ai";
 
 import styled from "styled-components";
 import events from "../data/events.json";
+import EventPageOp from "./EventPageOp";
 
 function EventPage() {
   let { eventId } = useParams();
@@ -56,6 +57,10 @@ function EventPage() {
       <BottomSection>
         <Heading>About this event</Heading>
       </BottomSection>
+      <EventPageOp
+      Icon={AiFillHeart}
+      title="Free Cancelation"
+      text="Cancel up to 24 hours in advance to receive a full refund"/>
     </div>
   );
 }
