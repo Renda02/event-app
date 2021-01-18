@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
+import { AiOutlineInfoCircle } from "react-icons/ai";
 
 import styled from "styled-components";
 import events from "../data/events.json";
@@ -9,14 +10,14 @@ function EventPage() {
   let { eventId } = useParams();
 
   const event = events.find((ev) => {
-    return ev.id == eventId;
+    return ev.id === eventId;
   });
 
   return (
     <div>
       <div>
         {" "}
-        <h1> {event.title}</h1>
+        <Title> {event.title}</Title>
       </div>
       <Ratings>
         <RatingContainer>
@@ -44,6 +45,7 @@ function EventPage() {
       </div>
       <TopSection>
         <Box>
+          <AiOutlineInfoCircle />
           <Context>
             Due to the COVID-19 outbreak, tours, attractions, and venues in this
             location may be temporarily closed. Check out our travel update page
@@ -51,11 +53,19 @@ function EventPage() {
           </Context>
         </Box>
       </TopSection>
+      <BottomSection>
+        <Heading>About this event</Heading>
+      </BottomSection>
     </div>
   );
 }
 
 export default EventPage;
+
+const Title = styled.h1`
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+`;
 
 const Ratings = styled.footer`
   align-items: flex-end;
@@ -76,6 +86,7 @@ const Review = styled.small`
   letter-spacing: 1px;
   padding-left: 0.5rem;
   opacity: 0.7;
+  color: #033c79;
 `;
 
 const Image = styled.img`
@@ -95,14 +106,15 @@ const TopSection = styled.section`
 `;
 
 const Box = styled.div`
-  display: block;
-  min-width: 320px;
-  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  padding: 16px 0;
   line-height: 1.2rem;
-  margin-bottom:32px;
+  margin-bottom: 32px;
 
   @media (min-width: 1024px) {
-    max-width: 1400px;
     padding-left: 32px;
     padding-right: 32px;
     width: 100%;
@@ -117,4 +129,17 @@ const Box = styled.div`
 
 const Context = styled.p`
   display: block;
+`;
+
+const BottomSection = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Heading = styled.h2`
+  font-weight: 500;
+  margin: 32px 0 28px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 `;

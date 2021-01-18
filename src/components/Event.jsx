@@ -68,7 +68,6 @@ const EventWrapper = styled.div`
   width: 30%;
   background: #fff;
   margin: 8px;
-
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
 `;
 
@@ -80,7 +79,7 @@ const Box = styled.div`
   list-style: none;
   padding-top: 20px;
   padding-bottom: 20px;
-  margin: 0px;
+  margin: 0 auto;
 `;
 
 const ButtonBox = styled.div`
