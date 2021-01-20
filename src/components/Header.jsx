@@ -39,6 +39,7 @@ const HeaderBar = styled.div`
   position: sticky;
   margin: 0 auto;
   background: #f2f2f2;
+  text-decoration: none;
 `;
 
 const HeaderLeft = styled.div`
@@ -52,9 +53,9 @@ const Heading = styled(Link)`
   text-decoration: none;
   margin: 0 auto;
   font-weight: 600;
-  color: #6c61f6;
-`;
+color:#000;`;
 
 const HeaderRight = styled.div`
   display: flex;
+  text-decoration: none;
 `;
