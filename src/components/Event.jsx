@@ -49,8 +49,8 @@ function Event(props) {
             </Ratings>{" "}
             <ButtonBox>
               {" "}
-              <Button type="submit" value="Sign up" />
-              <EventButton to={`/events/${props.id}`}>See Event</EventButton>
+           
+              <Button to={`/events/${props.id}`}>See Event</Button>
             </ButtonBox>
           </div>
         </ContentHeading>
@@ -62,13 +62,16 @@ function Event(props) {
 export default Event;
 
 const EventWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30%;
+ 
+  width: 300px;
   background: #fff;
-  margin: 8px;
+  padding-left: 8px;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+  overflow:hidden;
+
+  &:hover{
+    transform:scale(1.1)
+  }
 `;
 
 const Box = styled.div`
@@ -87,38 +90,21 @@ const ButtonBox = styled.div`
   justify-content: space-between;
 `;
 
-const Button = styled.input`
+const Button = styled(Link)`
   background: #6c61f6;
   border: none;
+  text-decoration:none;
   color: #fff;
   outline: none;
   font-size: 17px;
   cursor: pointer;
   border-radius: 5px;
-  padding: 5px;
+  padding: 5px 10px;
   transition: 0.3ms ease-ease-in-out;
   margin-top: 0.9rem;
 `;
 
-const EventButton = styled(Link)`
-  border: none;
 
-  outline: none;
-  font-size: 17px;
-  cursor: pointer;
-  border-radius: 5px;
-  text-decoration: none;
-  padding: 5px;
-  transition: 0.3ms ease-ease-in-out;
-  margin-top: 0.9rem;
-  color: #6c61f6;
-  background: #fff;
-
-  &:hover {
-    color: #fff;
-    background: #6c61f6;
-  }
-`;
 
 const ContentHeading = styled.div`
   display: grid;
@@ -127,7 +113,7 @@ const ContentHeading = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 `;
 
-const Heading = styled.div`
+const Heading = styled.h2`
   font-size: 1rem;
   padding: 0.4rem 0;
 `;
@@ -157,8 +143,8 @@ const RatingItem = styled.span`
 `;
 
 const Image = styled.img`
-  object-fit: cover;
-  width: 60%;
+  overflow:hidden;
+  height:200px;
 `;
 
 const Review = styled.small`
