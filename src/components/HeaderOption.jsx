@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+
+import { Container } from "../globalStyles";
+
 function HeaderOption({ Icon, title }) {
   return (
     <Header>
@@ -19,6 +22,9 @@ const Header = styled.div`
   margin-right: 20px;
   color: #5d5b6f;
   cursor: pointer;
+
+  ${Container};
+  
 
   &:hover {
     color: #6c61f6;
