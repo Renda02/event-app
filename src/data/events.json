@@ -2,12 +2,12 @@
   {
     "title": "Luxury Canal Cruise",
     "id":"1",
-     "location":"Amsterdam",
-     "price":"0",
+    "location":"Amsterdam",
+    "price": 300,
     "date":"6/03/2021", 
-    "time":"17h00-18h00",
+    "startTime": "17:00",
+    "endTime":"18:00",
     "image":"https://cdn.getyourguide.com/img/tour/5da3a3a9d7294.jpeg/68.jpg"
-    
   },
   {
     "title": "Tech-fair Meetup",

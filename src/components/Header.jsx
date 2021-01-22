@@ -24,6 +24,10 @@ function Header() {
 
         <HeaderMenu onClick={handleClick} click={click}>
           <HeaderItem>
+          <HeaderLink to="/">
+              {" "}
+              <HeaderOption Icon={AiOutlinePlus} title="Home" />
+            </HeaderLink>
             <HeaderLink to="/add-event">
               {" "}
               <HeaderOption Icon={AiOutlinePlus} title="Add event" />

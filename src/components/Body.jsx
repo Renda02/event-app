@@ -11,7 +11,8 @@ function Body(props) {
             return (
               <Event
                 image={event.image}
-                time={event.time}
+                startTime={event.startTime}
+                endTime={event.endTime}
                 title={event.title}
                 location={event.location}
                 date={event.date}
@@ -32,16 +33,18 @@ const Wrapper = styled.div`
   padding-top: 40px;
   padding-bottom: 40px;
   background: #dbe0f5;
+  padding-left:6rem;
+  padding-right:4rem;
 `;
 
-
-
 const Heading = styled.h2`
-  padding: 10px 20px;
+  padding: 10px 0;
 `;
 
 const EventContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content:center;
+  
 `;

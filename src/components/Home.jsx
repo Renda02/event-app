@@ -1,6 +1,5 @@
 import { useState, useRef } from "react";
 
-
 import Service from "./Service";
 import Body from "./Body";
 import Button from "./Button";
@@ -47,8 +46,6 @@ function Home() {
 
   return (
     <>
-     
-
       <Wrapper>
         <Intro>
           <Heading>Connect via</Heading>
@@ -60,7 +57,7 @@ function Home() {
                 type="text"
                 onChange={handleChange}
                 ref={searchRef}
-                value="search events"
+                placeholder="Conference..."
               />
               {suggestionList.length > 0 && (
                 <AutoComplete>
@@ -89,8 +86,6 @@ function Home() {
       <Service />
 
       <Button />
-     
-     
     </>
   );
 }

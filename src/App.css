@@ -4,12 +4,24 @@
   box-sizing: border-box;
 }
 
-body, input {
+body,
+input {
   font-family: "Montserrat", sans-serif;
   list-style: none;
   text-decoration: none;
   line-height: 1.5;
-  
+}
+
+.input-error {
+  border-color: red !important;
+}
+
+.input-error:focus {
+  border-color: red !important;
+}
+
+.input-correct {
+  border-color: green !important;
 }
 
 /*
