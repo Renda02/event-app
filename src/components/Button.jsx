@@ -121,7 +121,7 @@ outline: none;
 
 
 const Buttonn = styled.button`
-  border: 2px solid #6c61f6;
+  border: 2px solid #645bee;
  padding:6px;
   font-size: 18px;
   background: #6c61f6;

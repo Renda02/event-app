@@ -27,5 +27,28 @@ padding-left:40px;
 `;
 
 
+export const Button=styled.button`
+border-radius:4px;
+background:#6c61f6;
+white-space:nowrap;
+padding:12px 24px;
+color:#fff;
+font-size:16px;
+border:none;
+outline:none;
+cursor: pointer;
+
+&::hover{
+  transition:all 0.3s ease-out;
+  background:#fff;
+  color:#6c61f6;
+}
+
+@media screen and (max-width:960px){
+  width:100%;
+}
+`;
+
+
 
 export default GlobalStyle;

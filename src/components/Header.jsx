@@ -6,7 +6,7 @@ import { HiOutlineTicket } from "react-icons/hi";
 import { BiHelpCircle } from "react-icons/bi";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-import { Container } from "../globalStyles";
+import { Container,Button } from "../globalStyles";
 import HeaderOption from "./HeaderOption";
 
 function Header() {
@@ -22,12 +22,12 @@ function Header() {
           {click ? <FaTimes /> : <FaBars />}
         </MobileIcon>
 
-        <HeaderMenu onClick={handleClick}>
+        <HeaderMenu onClick={handleClick} click={click}>
           <HeaderItem>
-            <Link to="/add-event">
+            <HeaderLink to="/add-event">
               {" "}
               <HeaderOption Icon={AiOutlinePlus} title="Add event" />
-            </Link>
+            </HeaderLink>
           </HeaderItem>
           <HeaderItem>
             {" "}
@@ -41,6 +41,9 @@ function Header() {
             {" "}
             <HeaderOption Icon={BiHelpCircle} title="Help" />
           </HeaderItem>
+          <ButtonItem>
+            <Button/>
+          </ButtonItem>
         </HeaderMenu>
       </HeaderBar>
     </Nav>
@@ -94,10 +97,13 @@ const MobileIcon = styled.div`
   }
 `;
 
+const HeaderLink=styled(Link)`text-decoration:none;`;
+
 const HeaderMenu = styled.div`
   display: flex;
   align-items: center;
   text-align: center;
+  padding-top:2rem;  background: #f2f2f2;
 
   @media screen and (max-width: 960px) {
     display: flex;
@@ -127,3 +133,15 @@ const HeaderItem = styled.div`
     border:none;
   }
 `;
+
+
+const ButtonItem=styled.div`
+@media screen and (max-width:960px){
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:120px;
+}`;
+
+

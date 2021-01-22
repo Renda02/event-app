@@ -27,6 +27,7 @@ function App() {
         <Route path="/add-event">
           <AddEvent />
         </Route>
+        
         <Route path="/">
           <Home />
         </Route>
