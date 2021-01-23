@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { AiOutlinePlus, AiOutlineHeart,AiOutlineHome } from "react-icons/ai";
+import { AiOutlinePlus, AiOutlineHeart, AiOutlineHome } from "react-icons/ai";
 import { HiOutlineTicket } from "react-icons/hi";
 import { BiHelpCircle } from "react-icons/bi";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-import { Container, Button } from "../globalStyles";
+import { Container } from "../globalStyles";
 import HeaderOption from "./HeaderOption";
 
 function Header() {
@@ -47,9 +47,6 @@ function Header() {
             {" "}
             <HeaderOption Icon={BiHelpCircle} title="Help" />
           </HeaderItem>
-          <ButtonItem>
-            <Button />
-          </ButtonItem>
         </HeaderMenu>
       </HeaderBar>
     </Nav>
@@ -140,15 +137,5 @@ const HeaderItem = styled.div`
 
   &:hover {
     border: none;
-  }
-`;
-
-const ButtonItem = styled.div`
-  @media screen and (max-width: 960px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 120px;
   }
 `;

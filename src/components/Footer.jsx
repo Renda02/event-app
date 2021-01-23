@@ -5,10 +5,10 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterContact>
-        <FooterSubHeading>Welcome to Eventily</FooterSubHeading>
+        <FooterSubHeading>Company</FooterSubHeading>
       </FooterContact>
+      
       <FooterText to="/about-us">About Us</FooterText>
-
       <FooterText to="/contact">Contact Us</FooterText>
       <SubFooter>
         <Text> Copyright @Evently 2020 </Text>
@@ -42,13 +42,13 @@ const FooterContact = styled.section`
 const FooterSubHeading = styled.p`
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, Helvetica, sans-serif, sans-serif;
-  margin-bottom: 24px;
-  font-size: 24px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
 `;
 
 const FooterText = styled(Link)`
-  margin-bottom: 24px;
-  font-size: 18px;
+  margin-bottom: 14px;
+  font-size: 1rem;
   color: #fff;
   text-decoration: none;
 `;
