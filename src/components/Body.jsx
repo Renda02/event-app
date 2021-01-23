@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Event from "./Event";
 
+
+
 function Body(props) {
   return (
     <Wrapper>
