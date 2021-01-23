@@ -52,7 +52,7 @@ const Container = styled.div`
   min-width: 380px;
   padding:  2.2rem 0;
 
-  @media (min-width: 768px) {
+  @media (max-width: 960px) {
     margin-left: auto;
     margin-right: auto;
     padding-left: 2rem;
@@ -121,7 +121,7 @@ outline: none;
 
 
 const Buttonn = styled.button`
-  border: 2px solid #6c61f6;
+  border: 2px solid #645bee;
  padding:6px;
   font-size: 18px;
   background: #6c61f6;

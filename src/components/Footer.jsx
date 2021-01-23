@@ -1,33 +1,56 @@
 import styled from "styled-components";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <Wrapper>
-      <Paragraph>Welcome to Eventily</Paragraph>
-      <About to="/about-us">About Us</About>
-      <Contact to="/contact">Contact Us</Contact>
+    <FooterContainer>
+      <FooterContact>
+        <FooterSubHeading>Welcome to Eventily</FooterSubHeading>
+      </FooterContact>
+      <FooterText to="/about-us">About Us</FooterText>
+
+      <FooterText to="/contact">Contact Us</FooterText>
       <SubFooter>
         <Text> Copyright @Evently 2020 </Text>
       </SubFooter>
-    </Wrapper>
+    </FooterContainer>
   );
 }
 
 export default Footer;
 
-const Wrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background: #000;
+const FooterContainer = styled.div`
+  background-color: #101522;
+  padding: 2.7rem 0 2rem 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 `;
 
-const Paragraph = styled.h4`
-  padding-left: 10px;
-  color:#fff;
-  margin: 20px;
+const FooterContact = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 24px;
+  align-items: center;
+  padding: 24px;
+  color: #fff;
+`;
+
+const FooterSubHeading = styled.p`
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, Helvetica, sans-serif, sans-serif;
+  margin-bottom: 24px;
+  font-size: 24px;
+`;
+
+const FooterText = styled(Link)`
+  margin-bottom: 24px;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
 `;
 
 const SubFooter = styled.div`
@@ -40,10 +63,8 @@ const SubFooter = styled.div`
   padding-bottom: 10px;
 `;
 
-const Text= styled.h6` padding-left: 10px;
-color:#000;
-margin-left:0 auto;`;
-
-const Contact=styled(Link)``;
-
-const About =styled(Link)``;
+const Text = styled.h6`
+  padding-left: 10px;
+  color: #000;
+  margin-left: 0 auto;
+`;

@@ -19,7 +19,7 @@ function Event(props) {
                 <BiLocationPlus /> {props.location}
               </Venue>
               <span>
-                <BiTimeFive />:{props.time}
+                <BiTimeFive />:{props.startTime}-{props.endTime}
               </span>
 
               <span>
@@ -63,21 +63,22 @@ export default Event;
 
 const EventWrapper = styled.div`
  
-  width: 300px;
+  width: 30%;
   background: #fff;
-  padding-left: 8px;
+ max-width:300px;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
   overflow:hidden;
+  margin:5px;
 
   &:hover{
-    transform:scale(1.1)
+    transform:scale(1.03)
   }
 `;
 
 const Box = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   list-style: none;
   padding-top: 20px;
@@ -145,6 +146,7 @@ const RatingItem = styled.span`
 const Image = styled.img`
   overflow:hidden;
   height:200px;
+  max-width:100%;
 `;
 
 const Review = styled.small`
