@@ -94,6 +94,11 @@ const Wrapper = styled(Container)`
 
   justify-content: space-between;
   margin: 0 auto;
+
+  @media screen and (max-width:920px){
+    flex-direction:column;
+
+  }
 `;
 
 const Intro = styled.div`
@@ -121,6 +126,10 @@ const Image = styled.img`
   width: 45%;
   border-radius: 5px;
   padding: 1em 0;
+
+  @media screen and (max-width:920px){
+    display:none;
+  }
 `;
 
 const HeaderSearch = styled.div`

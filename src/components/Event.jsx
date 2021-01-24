@@ -73,6 +73,10 @@ const EventWrapper = styled.div`
   &:hover{
     transform:scale(1.03)
   }
+
+  @media screen and (max-width:920px){
+    width:100%;
+  }
 `;
 
 const Box = styled.div`
