@@ -1,9 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
-import { AiFillHeart, AiOutlineInfoCircle } from "react-icons/ai";
-
+import { AiOutlineInfoCircle } from "react-icons/ai";
 import styled from "styled-components";
+
+import { Container } from "../globalStyles";
 import events from "../data/events.json";
 import EventPageOp from "./EventPageOp";
 
@@ -15,38 +16,38 @@ function EventPage() {
   });
 
   return (
-    <div>
+    <Main>
       <div>
         {" "}
         <Title> {event.title}</Title>
+        <Ratings>
+          <RatingContainer>
+            {" "}
+            <RatingItem>
+              <BsStarFill fill="#FCD94B" />
+            </RatingItem>
+            <RatingItem>
+              <BsStarFill fill="#FCD94B" />
+            </RatingItem>
+            <RatingItem>
+              <BsStarFill fill="#FCD94B" />
+            </RatingItem>
+            <RatingItem>
+              <BsStarFill fill="#FCD94B" />
+            </RatingItem>
+            <RatingItem>
+              <BsStarHalf fill="#FCD94B" />
+            </RatingItem>
+            <Review>4.5 (122)</Review>
+          </RatingContainer>
+        </Ratings>{" "}
       </div>
-      <Ratings>
-        <RatingContainer>
-          {" "}
-          <RatingItem>
-            <BsStarFill fill="#FCD94B" />
-          </RatingItem>
-          <RatingItem>
-            <BsStarFill fill="#FCD94B" />
-          </RatingItem>
-          <RatingItem>
-            <BsStarFill fill="#FCD94B" />
-          </RatingItem>
-          <RatingItem>
-            <BsStarFill fill="#FCD94B" />
-          </RatingItem>
-          <RatingItem>
-            <BsStarHalf fill="#FCD94B" />
-          </RatingItem>
-          <Review>4.5 (122)</Review>
-        </RatingContainer>
-      </Ratings>{" "}
       <div>
         <Image src={event.image} alt="event" />
       </div>
       <TopSection>
         <Box>
-          <AiOutlineInfoCircle />
+          <Icon><AiOutlineInfoCircle /></Icon>
           <Context>
             Due to the COVID-19 outbreak, tours, attractions, and venues in this
             location may be temporarily closed. Check out our travel update page
@@ -57,19 +58,54 @@ function EventPage() {
       <BottomSection>
         <Heading>About this event</Heading>
       </BottomSection>
-      <EventPageOp
-      Icon={AiFillHeart}
-      title="Free Cancelation"
-      text="Cancel up to 24 hours in advance to receive a full refund"/>
-    </div>
+      <div>
+        {" "}
+        <EventPageOp
+          title="Free Cancelation"
+          text="Cancel up to 24 hours in advance to receive a full refund"
+        />
+      </div>
+      <div>
+        {" "}
+        <EventPageOp
+          title="COVID-19 precautions"
+          text="Special health and safety measures apply. "
+        />
+      </div>
+      <div>
+        {" "}
+        <EventPageOp
+          title="Mobile tickecting"
+          text="Use your phone or print your voucher"
+        />
+      </div>
+      <div>
+        {" "}
+        <EventPageOp title="Instant confirmation" />
+      </div>
+    </Main>
   );
 }
 
 export default EventPage;
 
+const Main = styled(Container)`
+  margin-top: 0;
+  padding-top: 24px;
+  
+`;
+const Icon=styled.span`height: 1em;
+width: 1em;
+margin-right:.8rem;`;
+
 const Title = styled.h1`
   font-size: 2.25rem;
   line-height: 2.75rem;
+
+  @media screen and (max-width:960px){
+    font-size:2rem;
+    line-height:1.8rem;
+  }
 `;
 
 const Ratings = styled.footer`
@@ -124,7 +160,7 @@ const Box = styled.div`
     padding-right: 32px;
     width: 100%;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 960px) {
     margin-left: auto;
     margin-right: auto;
     padding-left: 32px;
@@ -138,13 +174,12 @@ const Context = styled.p`
 
 const BottomSection = styled.section`
   display: flex;
-  justify-content: center;
   align-items: center;
 `;
 
 const Heading = styled.h2`
-  font-weight: 500;
-  margin: 32px 0 28px;
+  font-weight: 600;
+  margin: 32px 0 28px 0;
   font-size: 1.5rem;
   line-height: 2rem;
 `;

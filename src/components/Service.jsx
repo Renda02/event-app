@@ -2,13 +2,14 @@ import React from "react";
 import { FiThumbsUp } from "react-icons/fi";
 import { AiFillHeart } from "react-icons/ai";
 import { MdAccessibility } from "react-icons/md";
-
 import styled from "styled-components";
+
+import { Container } from "../globalStyles";
 import ServiceOption from "./ServiceOption";
 
 function Service() {
   return (
-    <Container>
+    <Main>
       <Content>
         <TextWrapper>
           <ServiceOption
@@ -28,13 +29,13 @@ function Service() {
           />
         </TextWrapper>
       </Content>
-    </Container>
+    </Main>
   );
 }
 
 export default Service;
 
-const Container = styled.div`
+const Main = styled(Container)`
   display: block;
   min-width: 320px;
   padding: 1.6rem 1rem;

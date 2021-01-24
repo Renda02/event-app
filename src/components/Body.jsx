@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Event from "./Event";
 
+
+
 function Body(props) {
   return (
     <Wrapper>
@@ -46,5 +48,9 @@ const EventContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content:center;
+
+  @media screen and (max-width:920px){
+    flex-direction:column;
+  }
   
 `;

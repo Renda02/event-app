@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { Container } from "../globalStyles";
 
 function Button() {
   return (
     <Main>
-      <Container>
+      <Containa>
         <SectionContainer>
           <div>
             <Img src="https://cdn.getyourguide.com/tf/assets/static/newsletter-signup/newsletter-background.jpg" alt="newsletter" />
@@ -35,19 +36,19 @@ function Button() {
             <Span>By signing up, you agree to receive promotional emails. You can unsubscribe at any time. For more information, read our <a href="/" target="_blank">Privacy Policy</a></Span>
         
         </SectionButton>
-      </Container>
+      </Containa>
     </Main>
   );
 }
 
 export default Button;
 
-const Main=styled.div`
+const Main=styled(Container)`
 width:100%;
 margin:0 auto;
 padding:1.6rem 0;`;
 
-const Container = styled.div`
+const Containa = styled.div`
   display: block;
   min-width: 380px;
   padding:  2.2rem 0;

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { AiOutlinePlus, AiOutlineHeart } from "react-icons/ai";
+import { AiOutlinePlus, AiOutlineHeart, AiOutlineHome } from "react-icons/ai";
 import { HiOutlineTicket } from "react-icons/hi";
 import { BiHelpCircle } from "react-icons/bi";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-import { Container,Button } from "../globalStyles";
+import { Container } from "../globalStyles";
 import HeaderOption from "./HeaderOption";
 
 function Header() {
@@ -24,10 +24,12 @@ function Header() {
 
         <HeaderMenu onClick={handleClick} click={click}>
           <HeaderItem>
-          <HeaderLink to="/">
+            <HeaderLink to="/">
               {" "}
-              <HeaderOption Icon={AiOutlinePlus} title="Home" />
+              <HeaderOption Icon={AiOutlineHome} title="Home" />
             </HeaderLink>
+          </HeaderItem>
+          <HeaderItem>
             <HeaderLink to="/add-event">
               {" "}
               <HeaderOption Icon={AiOutlinePlus} title="Add event" />
@@ -45,9 +47,6 @@ function Header() {
             {" "}
             <HeaderOption Icon={BiHelpCircle} title="Help" />
           </HeaderItem>
-          <ButtonItem>
-            <Button/>
-          </ButtonItem>
         </HeaderMenu>
       </HeaderBar>
     </Nav>
@@ -73,7 +72,6 @@ export const HeaderBar = styled(Container)`
   display: flex;
   justify-content: space-between;
   height: 80px;
-  
 `;
 
 const Heading = styled(Link)`
@@ -101,13 +99,16 @@ const MobileIcon = styled.div`
   }
 `;
 
-const HeaderLink=styled(Link)`text-decoration:none;`;
+const HeaderLink = styled(Link)`
+  text-decoration: none;
+`;
 
 const HeaderMenu = styled.div`
   display: flex;
   align-items: center;
   text-align: center;
-  padding-top:2rem;  background: #f2f2f2;
+  padding-top: 2rem;
+  background: #f2f2f2;
 
   @media screen and (max-width: 960px) {
     display: flex;
@@ -125,27 +126,16 @@ const HeaderMenu = styled.div`
 const HeaderItem = styled.div`
   height: 80px;
   border-bottom: 2px solid transparent;
-  
+
   &:hover {
     border-bottom: 2px solid #000;
   }
 
-  @media screen and (max-width: 960px) {width:100%;
+  @media screen and (max-width: 960px) {
+    width: 100%;
   }
 
-  &:hover{
-    border:none;
+  &:hover {
+    border: none;
   }
 `;
-
-
-const ButtonItem=styled.div`
-@media screen and (max-width:960px){
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  width:100%;
-  height:120px;
-}`;
-
-

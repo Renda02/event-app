@@ -6,7 +6,7 @@ function EventPageOp({title, text, Icon}) {
       <List>
         <div>
           <ListItem>
-            {Icon && <Icon className="header_icon" />}
+      
             <Title>{title}</Title>
           </ListItem>
           <Text>{text}</Text>
@@ -20,10 +20,13 @@ export default EventPageOp;
 
 const List = styled.dl`
   display: flex;
+  
 `;
 
 const ListItem = styled.dt`
   font-size: 1rem;
+  flex-direction:row;
+  display:flex;
   line-height: 1.5rem;
   display: flex;
   margin: 8px 0 4px;

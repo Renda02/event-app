@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Container } from "../globalStyles";
 
 function About() {
   return (
@@ -9,7 +10,7 @@ function About() {
         </IntroContainer>{" "}
       </Intro>
       <Section>
-        <Container>
+        <Wrapper>
           <Title>Changing your travels</Title>
           <Context>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio
@@ -17,7 +18,7 @@ function About() {
             aliquid expedita quisquam dicta maiores a beatae earum eum harum
             rerum?
           </Context>
-        </Container>
+        </Wrapper>
       </Section>
     </Main>
   );
@@ -25,7 +26,7 @@ function About() {
 
 export default About;
 
-const Main = styled.div`
+const Main = styled(Container)`
   flex-grow: 1;
 `;
 
@@ -79,7 +80,7 @@ const Context = styled.p`
   align-items: center;
 `;
 
-const Container = styled.div`
+const Wrapper = styled.div`
   flex-direction: column;
   max-width: 688px;
   margin-left:0;

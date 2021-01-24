@@ -1,14 +1,12 @@
 import { useState, useRef } from "react";
+import styled from "styled-components";
 
+import { Container } from "../globalStyles";
 import Service from "./Service";
 import Body from "./Body";
 import Button from "./Button";
-
 import events from "../data/events.json";
-
 import image from "../images/event.jpeg";
-import { BiSearch } from "react-icons/bi";
-import styled from "styled-components";
 
 function Home() {
   const [search, setSearch] = useState("");
@@ -52,7 +50,6 @@ function Home() {
           <Headin>online events.</Headin>
           <HeaderSearch>
             <div>
-              <BiSearch />
               <Input
                 type="text"
                 onChange={handleChange}
@@ -92,12 +89,16 @@ function Home() {
 
 export default Home;
 
-const Wrapper = styled.div`
+const Wrapper = styled(Container)`
   display: flex;
-  width: 100%;
-  max-width: 1080px;
+
   justify-content: space-between;
   margin: 0 auto;
+
+  @media screen and (max-width:920px){
+    flex-direction:column;
+
+  }
 `;
 
 const Intro = styled.div`
@@ -125,6 +126,10 @@ const Image = styled.img`
   width: 45%;
   border-radius: 5px;
   padding: 1em 0;
+
+  @media screen and (max-width:920px){
+    display:none;
+  }
 `;
 
 const HeaderSearch = styled.div`

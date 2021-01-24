@@ -5,11 +5,30 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterContact>
-        <FooterSubHeading>Welcome to Eventily</FooterSubHeading>
+        <FooterSubHeading>Welcome Evently</FooterSubHeading>
       </FooterContact>
-      <FooterText to="/about-us">About Us</FooterText>
-
-      <FooterText to="/contact">Contact Us</FooterText>
+      <FooterLinksContainer>
+        <FooterLinkWrap>
+          <FooterLinksItems>
+            <FooterTitle>Support</FooterTitle>
+            <FooterLink to="/contact">Contact Us</FooterLink>
+            <FooterLink to="/">Help</FooterLink>
+            <FooterLink to="/">How it work</FooterLink>
+          </FooterLinksItems>
+          <FooterLinksItems>
+            <FooterTitle>Company</FooterTitle>
+            <FooterLink to="/about-us">About Us</FooterLink>
+            <FooterLink to="/">Events</FooterLink>
+            <FooterLink to="/">Careers</FooterLink>
+          </FooterLinksItems>
+          <FooterLinksItems>
+            <FooterTitle>Work with us</FooterTitle>
+            <FooterLink to="/">Admistration</FooterLink>
+            <FooterLink to="/">Team</FooterLink>
+            <FooterLink to="/">Services</FooterLink>
+          </FooterLinksItems>
+        </FooterLinkWrap>
+      </FooterLinksContainer>
       <SubFooter>
         <Text> Copyright @Evently 2020 </Text>
       </SubFooter>
@@ -21,7 +40,7 @@ export default Footer;
 
 const FooterContainer = styled.div`
   background-color: #101522;
-  padding: 2.7rem 0 2rem 0;
+  padding: 1.7rem 0 2rem 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -42,15 +61,8 @@ const FooterContact = styled.section`
 const FooterSubHeading = styled.p`
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, Helvetica, sans-serif, sans-serif;
-  margin-bottom: 24px;
-  font-size: 24px;
-`;
-
-const FooterText = styled(Link)`
-  margin-bottom: 24px;
-  font-size: 18px;
-  color: #fff;
-  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
 `;
 
 const SubFooter = styled.div`
@@ -67,4 +79,55 @@ const Text = styled.h6`
   padding-left: 10px;
   color: #000;
   margin-left: 0 auto;
+`;
+
+const FooterLinksContainer = styled.div`
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 820px) {
+    padding-top: 32px;
+  }
+`;
+
+const FooterLinkWrap = styled.div`
+  display: flex;
+
+  @media screen and (max-width: 820px) {
+    flex-direction: column;
+  }
+`;
+
+const FooterLinksItems = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 16px;
+  text-align: left;
+  width: 160px;
+  box-sizing: border-box;
+  color: #ffff;
+
+  @media screen and (max-width: 420px) {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+  }
+`;
+
+const FooterTitle = styled.h2`
+  margin-bottom: 16px;
+`;
+
+const FooterLink = styled(Link)`
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+
+  &:hover {
+    color: #645bee;
+    transition: 0.3s ease-out;
+  }
 `;
