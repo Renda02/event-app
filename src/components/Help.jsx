@@ -1,6 +1,22 @@
+import React, { useState } from "react";
 import styled from "styled-components";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import { FiMinus } from "react-icons/fi";
+
+import { Data } from "./HelpData";
+import { IconContext } from "react-icons/lib";
 
 function Help() {
+  const [clicked, setClicked] = useState(false);
+
+  const toggle = (index) => {
+    if (clicked === index) {
+      //if clicked question is alredy active/press,then close it
+      return setClicked(null);
+    }
+    setClicked(index);
+  };
+
   return (
     <Main>
       <IntroContainer>
@@ -26,6 +42,35 @@ function Help() {
           </SectionWrap>
         </SectionAlert>
       </SectionHeader>
+      <IconContext.Provider value={{ color: "#81beff", size: "25px" }}>
+        <HelpSection>
+          <Title>How can we help?</Title>
+          <HelpContainer>
+            {Data.map((item, index) => {
+              return (
+                <>
+                  <Wrap onClick={() => toggle(index)} key={index}>
+                    {" "}
+                    <HelpHeading>{item.question}</HelpHeading>
+                    <span>
+                      {clicked === index ? (
+                        <FiMinus />
+                      ) : (
+                        <MdKeyboardArrowDown />
+                      )}
+                    </span>
+                  </Wrap>
+                  {clicked === index ? (
+                    <Dropdown>
+                      <p>{item.answer}</p>
+                    </Dropdown>
+                  ) : null}
+                </>
+              );
+            })}
+          </HelpContainer>
+        </HelpSection>
+      </IconContext.Provider>
     </Main>
   );
 }
@@ -61,7 +106,7 @@ const Container = styled.div`
     clear: both;
     content: "";
     display: table;
-}
+  }
 
   @media (min-width: 736px) {
     padding-right: 32px;
@@ -107,4 +152,51 @@ const SectionContent = styled.div`
 
 const Text = styled.p`
   text-align: center;
+`;
+
+const HelpSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 320px;
+  max-width: 560px;
+  padding: 32px;
+  margin-bottom: 24px;
+`;
+
+const Title = styled.h2`
+  margin: 0 0 16px 0;
+  font-size: 1.6rem;
+  line-height: 2rem;
+
+  &::before {
+    margin-right: 8px;
+    font-size: 18px;
+  }
+`;
+
+const HelpContainer = styled.div``;
+
+const Wrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+`;
+
+const HelpHeading = styled.h2`
+  font-size: 1.2rem;
+  padding: 1rem 0;
+`;
+
+const Dropdown = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 `;
