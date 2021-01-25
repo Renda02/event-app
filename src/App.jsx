@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import AddEvent from "./components/AddEvent";
+import Help from "./components/Help";
 import "./App.css";
 
 function App() {
@@ -27,7 +28,9 @@ function App() {
         <Route path="/add-event">
           <AddEvent />
         </Route>
-        
+        <Route path="/help">
+          <Help  />
+        </Route>
         <Route path="/">
           <Home />
         </Route>
