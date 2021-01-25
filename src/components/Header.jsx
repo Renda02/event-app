@@ -45,7 +45,8 @@ function Header() {
           </HeaderItem>
           <HeaderItem>
             {" "}
-            <HeaderOption Icon={BiHelpCircle} title="Help" />
+            <HeaderLink to="/help"> <HeaderOption Icon={BiHelpCircle} title="Help" /></HeaderLink>
+           
           </HeaderItem>
         </HeaderMenu>
       </HeaderBar>
