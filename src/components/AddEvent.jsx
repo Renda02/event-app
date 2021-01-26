@@ -3,7 +3,7 @@ import DatePicker from "react-datepicker";
 import styled from "styled-components";
 
 import "react-datepicker/dist/react-datepicker.css";
-import TimePicker from "react-time-picker";
+
 
 import Event from "./Event";
 
@@ -22,8 +22,8 @@ function AddEvent() {
 
   return (
     <div>
-      <h1>Add Event</h1>
-      <Main>
+      
+      <Main><div><h1>Add Event</h1>
         <div>
           {" "}
           <form>
@@ -97,7 +97,7 @@ function AddEvent() {
               <button>Create Event</button>
             </div>
           </form>
-        </div>
+        </div></div>
         <Event
           id={event.id}
           title={event.title}
@@ -108,6 +108,7 @@ function AddEvent() {
           image={event.image}
         />{" "}
         {/*{...event} */}
+        
       </Main>
     </div>
   );
@@ -121,4 +122,5 @@ const Main = styled.div`
   max-width: 1080px;
   justify-content: space-between;
   margin: 0 auto;
+ 
 `;
