@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { FiMinus } from "react-icons/fi";
 
-import { Data } from "./HelpData";
+import { Data ,ContactData} from "./HelpData";
 import { IconContext } from "react-icons/lib";
 
 function Help() {
@@ -21,7 +21,7 @@ function Help() {
     <Main>
       <IntroContainer>
         <Container>
-          <Heading>Hello, how can we help you today?</Heading>
+          <Heading>Hello, how can we be of good help today?</Heading>
         </Container>
       </IntroContainer>
       <SectionHeader>
@@ -69,6 +69,37 @@ function Help() {
               );
             })}
           </HelpContainer>
+          <SectionContact>
+            {" "}
+            <Title>
+              <strong>Still need some assitance?</strong>
+            </Title>
+            <ContactContainer>
+            {ContactData.map((item, index) => {
+              return (
+                <>
+                  <Wrap onClick={() => toggle(index)} key={index}>
+                    {" "}
+                    <HelpHeading>{item.question}</HelpHeading>
+                    <span>
+                      {clicked === index ? (
+                        <FiMinus />
+                      ) : (
+                        <MdKeyboardArrowDown />
+                      )}
+                    </span>
+                  </Wrap>
+                  {clicked === index ? (
+                    <Dropdown>
+                      <p>{item.answer}</p>
+                    </Dropdown>
+                  ) : null}
+                </>
+              );
+            })}
+
+            </ContactContainer>
+          </SectionContact>
         </HelpSection>
       </IconContext.Provider>
     </Main>
@@ -164,12 +195,12 @@ const HelpSection = styled.section`
   min-width: 320px;
   max-width: 560px;
   padding: 32px;
-  margin-bottom: 24px;
+  margin-bottom: 34px;
 `;
 
 const Title = styled.h2`
   margin: 0 0 16px 0;
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   line-height: 2rem;
 
   &::before {
@@ -178,7 +209,9 @@ const Title = styled.h2`
   }
 `;
 
-const HelpContainer = styled.div``;
+const HelpContainer = styled.div`
+  margin-bottom: 38px;
+`;
 
 const Wrap = styled.div`
   display: flex;
@@ -190,7 +223,7 @@ const Wrap = styled.div`
 `;
 
 const HelpHeading = styled.h2`
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 1rem 0;
 `;
 
@@ -200,3 +233,7 @@ const Dropdown = styled.div`
   justify-content: center;
   flex-direction: column;
 `;
+
+const SectionContact = styled.div`margin-top:25px;`;
+
+const ContactContainer=styled.div``;

@@ -11,3 +11,18 @@ answer:"All of your contact information as well as your local partner’s will b
     answer:"You are welcome to buy any event as a gift voucher"
 }
 ];
+
+export const ContactData=[
+  {
+    question:"Send an email",
+    answer:"Get in touch with our customer rendass@gmail.com"
+  },
+  {
+    question:"Call customer care",
+    answer:"Call our 24/7 call center +384 5542232453"
+  },
+  {
+    question:"Message us using Whatsapp",
+    answer:"We currently support over Whatsapp"
+  },
+]

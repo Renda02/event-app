@@ -4,15 +4,13 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <FooterContainer>
-      <FooterContact>
-        <FooterSubHeading>Welcome Evently</FooterSubHeading>
-      </FooterContact>
+      
       <FooterLinksContainer>
         <FooterLinkWrap>
           <FooterLinksItems>
             <FooterTitle>Support</FooterTitle>
-            <FooterLink to="/contact">Contact Us</FooterLink>
-            <FooterLink to="/">Help</FooterLink>
+            <FooterLink to="/help">Contact Us</FooterLink>
+            <FooterLink to="/help">Help</FooterLink>
             <FooterLink to="/">How it work</FooterLink>
           </FooterLinksItems>
           <FooterLinksItems>
@@ -47,23 +45,7 @@ const FooterContainer = styled.div`
   align-items: center;
 `;
 
-const FooterContact = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 24px;
-  align-items: center;
-  padding: 24px;
-  color: #fff;
-`;
 
-const FooterSubHeading = styled.p`
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, Helvetica, sans-serif, sans-serif;
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-`;
 
 const SubFooter = styled.div`
   display: flex;
@@ -127,7 +109,7 @@ const FooterLink = styled(Link)`
   margin-bottom: 0.5rem;
 
   &:hover {
-    color: #645bee;
+    color: #ffe;
     transition: 0.3s ease-out;
   }
 `;
