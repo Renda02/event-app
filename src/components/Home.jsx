@@ -1,18 +1,36 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 
 import { Container } from "../globalStyles";
 import Service from "./Service";
 import Body from "./Body";
 import Button from "./Button";
-import events from "../data/events.json";
 import image from "../images/event.jpeg";
 
 function Home() {
   const [search, setSearch] = useState("");
   const searchRef = useRef();
   const [suggestionList, setSuggestionList] = useState([]);
-  const [eventList, setEventList] = useState(events);
+  const [eventList, setEventList] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      // 1. get the data
+      const response = await fetch(
+        "https://murmuring-reaches-66235.herokuapp.com/event-list"
+      );
+      // 2. prepare the data
+      const data = await response.json();
+
+      // 3. update the value of the state
+      setEventList(data);
+    }
+    
+    fetchData();
+
+    // fetch data
+    // set the events
+  }, []);
 
   const handleSearch = () => {
     const filteredEvent = eventList.filter((e) => {
@@ -26,7 +44,7 @@ function Home() {
 
   const handleChange = () => {
     const searchTerm = searchRef.current.value;
-    const matchingEvents = events.filter((e) => {
+    const matchingEvents = eventList.filter((e) => {
       if (e.title.toLowerCase().includes(searchTerm.toLowerCase())) {
         return true;
       }
@@ -95,9 +113,8 @@ const Wrapper = styled(Container)`
   justify-content: space-between;
   margin: 0 auto;
 
-  @media screen and (max-width:920px){
-    flex-direction:column;
-
+  @media screen and (max-width: 920px) {
+    flex-direction: column;
   }
 `;
 
@@ -127,8 +144,8 @@ const Image = styled.img`
   border-radius: 5px;
   padding: 1em 0;
 
-  @media screen and (max-width:920px){
-    display:none;
+  @media screen and (max-width: 920px) {
+    display: none;
   }
 `;
 
