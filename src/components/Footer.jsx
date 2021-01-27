@@ -27,9 +27,7 @@ function Footer() {
           </FooterLinksItems>
         </FooterLinkWrap>
       </FooterLinksContainer>
-      <SubFooter>
-        <Text> Copyright @Evently 2020 </Text>
-      </SubFooter>
+      
     </FooterContainer>
   );
 }
@@ -47,21 +45,7 @@ const FooterContainer = styled.div`
 
 
 
-const SubFooter = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  background: #f4f3f5;
-  font-size: 16px;
-  font-weight: bold;
-  width: 100%;
-  padding-bottom: 10px;
-`;
 
-const Text = styled.h6`
-  padding-left: 10px;
-  color: #000;
-  margin-left: 0 auto;
-`;
 
 const FooterLinksContainer = styled.div`
   width: 100%;

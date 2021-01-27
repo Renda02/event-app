@@ -45,9 +45,7 @@ cursor: pointer;
   color:#6c61f6;
 }
 
-@media screen and (max-width:960px){
-  width:100%;
-}
+
 `;
 
 
