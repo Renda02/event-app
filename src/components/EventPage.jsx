@@ -1,19 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import styled from "styled-components";
 
 import { Container } from "../globalStyles";
-import events from "../data/events.json";
+
 import EventPageOp from "./EventPageOp";
 
 function EventPage() {
+  const [event, setEvent] = useState({});
+
   let { eventId } = useParams();
 
-  const event = events.find((ev) => {
-    return ev.id === eventId;
-  });
+  console.log(event, "event");
+  useEffect(() => {
+    async function fetchData() {
+      // 1. get the data
+      const response = await fetch(
+        `https://murmuring-reaches-66235.herokuapp.com/event/${eventId}`
+      );
+      // 2. prepare the data
+      const data = await response.json();
+
+      // 3. update the value of the state
+      setEvent(data);
+    }
+
+    fetchData();
+
+    // fetch data
+    // set the events
+  }, []);
 
   return (
     <Main>
@@ -47,7 +65,9 @@ function EventPage() {
       </div>
       <TopSection>
         <Box>
-          <Icon><AiOutlineInfoCircle /></Icon>
+          <Icon>
+            <AiOutlineInfoCircle />
+          </Icon>
           <Context>
             Due to the COVID-19 outbreak, tours, attractions, and venues in this
             location may be temporarily closed. Check out our travel update page
@@ -92,19 +112,20 @@ export default EventPage;
 const Main = styled(Container)`
   margin-top: 0;
   padding-top: 24px;
-  
 `;
-const Icon=styled.span`height: 1em;
-width: 1em;
-margin-right:.8rem;`;
+const Icon = styled.span`
+  height: 1em;
+  width: 1em;
+  margin-right: 0.8rem;
+`;
 
 const Title = styled.h1`
   font-size: 2.25rem;
   line-height: 2.75rem;
 
-  @media screen and (max-width:960px){
-    font-size:2rem;
-    line-height:1.8rem;
+  @media screen and (max-width: 960px) {
+    font-size: 2rem;
+    line-height: 1.8rem;
   }
 `;
 
