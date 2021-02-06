@@ -35,9 +35,10 @@ function Header() {
               <HeaderOption Icon={AiOutlinePlus} title="Add event" />
             </HeaderLink>
           </HeaderItem>
-          <HeaderItem>
+          <HeaderItem><HeaderLink to="/about-us">
             {" "}
-            <HeaderOption Icon={AiOutlineHeart} title="Cart" />
+            <HeaderOption Icon={AiOutlineHeart} title="About" />
+          </HeaderLink>
           </HeaderItem>
           <HeaderItem>
             {" "}
