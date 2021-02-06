@@ -15,6 +15,10 @@ function About() {
           <Context>
            Evently  is a platform for finding and building local communities. Use Evntly to meet new people, learn new things, find support, get out of their comfort zones, and pursue their passions, together.
           </Context>
+          <Title>What can you do?</Title>
+          <Context>
+           Missing people in 2021?Evently go you covered with virtual events that you and people close to can enjoy from your comfort of your home and re-connect.Organize a new event today and have an unforgettable experience.
+          </Context>
         </Wrapper>
       </Section>
     </Main>
@@ -92,8 +96,9 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 2rem;
   text-align: center;
   padding: 1rem 0;
+  
 `;
