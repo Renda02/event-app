@@ -11,12 +11,9 @@ function About() {
       </Intro>
       <Section>
         <Wrapper>
-          <Title>Changing your travels</Title>
+          <Title>Changing your experince</Title>
           <Context>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, odio
-            tempora magnam officiis maxime voluptates odit, quos quaerat facilis
-            aliquid expedita quisquam dicta maiores a beatae earum eum harum
-            rerum?
+           Evently  is a platform for finding and building local communities. Use Evntly to meet new people, learn new things, find support, get out of their comfort zones, and pursue their passions, together.
           </Context>
         </Wrapper>
       </Section>
@@ -36,6 +33,7 @@ const Intro = styled.section`
   background-color: #1a2b49;
   background-size: cover;
   background-repeat: no-repeat;
+  margin:1rem auto;
 
   @media (min-width: 736px) {
     height: 540px;
@@ -50,6 +48,7 @@ const IntroContainer = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
+
 `;
 
 const Heading = styled.h1`
@@ -78,16 +77,23 @@ const Context = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom:1rem;
+  
 `;
 
 const Wrapper = styled.div`
   flex-direction: column;
-  max-width: 688px;
-  margin-left:0;
-  margin-right:0;
+
+  margin-left: 0;
+  margin-right: 0;
+ display: flex;
+ align-items:center;
+  
 `;
 
-
-const Title=styled.h2`    font-size: 1.5rem;
-line-height: 2rem;
-text-align:center;`;
+const Title = styled.h2`
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+  padding: 1rem 0;
+`;

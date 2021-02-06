@@ -3,11 +3,12 @@ import DatePicker from "react-datepicker";
 import styled from "styled-components";
 import { Container, Button } from "../globalStyles";
 import "react-datepicker/dist/react-datepicker.css";
+import profile from "../images/events.jpg"
 
 import Event from "./Event";
 
 const emptyEvent = {
-  image: "https://cdn.getyourguide.com/img/tour/5da3a3a9d7294.jpeg/68.jpg",
+  image: `${profile}`,
   title: "",
   time: null,
   location: "",
