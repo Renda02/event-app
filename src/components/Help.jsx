@@ -128,8 +128,7 @@ const IntroContainer = styled.div`
 
 const Container = styled.div`
   text-align: center;
-  margin-right: auto;
-  margin-left: auto;
+  margin:0 auto;
   min-width: 320px;
   width: 100%;
 
@@ -140,8 +139,7 @@ const Container = styled.div`
   }
 
   @media (min-width: 736px) {
-    padding-right: 32px;
-    padding-left: 32px;
+   padding:0 32px;
   }
 `;
 

@@ -45,6 +45,5 @@ const Text = styled.dd`
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #6d7688;
-  margin-left: 38px;
-  margin-bottom: 24px;
+  margin: 0 0 24px 38px;
 `;
