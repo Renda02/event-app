@@ -160,8 +160,7 @@ const SectionHeader = styled.div`
   width: 100%;
   min-width: 320px;
   max-width: 560px;
-  padding-right: 16px;
-  padding-left: 16px;
+  padding : 0 16px;
   margin-bottom: 24px;
 `;
 
