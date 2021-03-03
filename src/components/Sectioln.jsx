@@ -211,6 +211,6 @@ const Submit = styled.button`
   font-size: 17px;
   cursor: pointer;
   border-radius: 5px;
-  padding: 5px;
+  padding: 5px 10px;
   transition: 0.3ms ease-ease-in-out;
 `;

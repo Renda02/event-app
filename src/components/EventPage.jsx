@@ -71,7 +71,7 @@ function EventPage() {
           <Context>
             Due to the COVID-19 outbreak, tours, attractions, and venues in this
             location may be temporarily closed. Check out our travel update page
-            for the latest information. <a href="/">Learn more</a>
+            for the latest information. <Link href="/">Learn more</Link>
           </Context>
         </Box>
       </TopSection>
@@ -129,6 +129,13 @@ const Title = styled.h1`
   }
 `;
 
+const Link= styled.a`
+font-weight:bold;
+
+&:hover, :focus{
+  color:#ff1100;
+}
+`;
 const Ratings = styled.footer`
   align-items: flex-end;
   display: flex;
@@ -182,10 +189,8 @@ const Box = styled.div`
     width: 100%;
   }
   @media (min-width: 960px) {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 32px;
-    padding-right: 32px;
+   margin:0 auto;
+  padding:0 auto;
   }
 `;
 
@@ -200,7 +205,7 @@ const BottomSection = styled.section`
 
 const Heading = styled.h2`
   font-weight: 600;
-  margin: 32px 0 28px 0;
+  margin: 32px 0 28px;
   font-size: 1.5rem;
   line-height: 2rem;
 `;
